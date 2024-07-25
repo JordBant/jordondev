@@ -1,0 +1,26 @@
+@use '../../styles/partials/index' as util;
+
+.page-side-title-wrapper {
+    @include util.size(100vw, 100vh, 0, 0);
+    @include util.flex(center, center, null, null, null);
+
+    position: relative;
+    background-color: util.$BKGR-PRIM;
+    background-size: util.$BKGR-SIZE;
+
+    .page-side-container {
+        @include util.size(100%, 100%, 0, 0);
+    }
+
+    .page-side-title {
+        @include util.setFont(util.$SIDE-PAGE_TITLE_DYNAMIC util.$FONT-PRIM, 300, util.$SIDE_PAGE_TITLE_COLOR);
+
+        text-align: center;
+        inset-block-end: 0;
+        position: absolute;
+        writing-mode: vertical-lr;
+        mix-blend-mode: difference;
+        margin: 0;
+        padding: 0;
+    }
+}

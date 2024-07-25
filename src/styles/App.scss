@@ -1,0 +1,16 @@
+@use './partials/index' as util;
+
+#root {
+  min-width: 100vw;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+li {
+  color: white;
+}

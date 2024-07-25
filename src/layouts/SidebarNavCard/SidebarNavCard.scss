@@ -1,0 +1,111 @@
+@use '../../styles/partials/_index.scss' as util;
+
+.sidebar-card {
+    @include util.size(100%, 100%, 0, 0);
+    @include util.flex(start, null, null, null, null);
+
+    container-name: sidebar-title;
+    container-type: size;
+
+    position: relative;
+
+    &__sidebar {
+        @include util.size(auto, 100%, 0, 0 7px 0);
+        @include util.flex(start, center, column, null, null);
+        overflow: hidden;
+        position: relative;
+
+        &::after {
+            @include util.size(100%, 100%, 0, 0);
+            content: '';
+
+            position: absolute;
+            background-color: util.$SIDEBAR-COLOR;
+
+            z-index: 1;
+            left: -100%;
+            transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+        }
+
+        .sidebar-card__options-trigger {
+            @include util.size(0, 0, 0, 0);
+            rotate: 90deg;
+            mix-blend-mode: difference;
+            transition: util.$TRANS-1;
+            z-index: 2;
+
+            &:hover {
+                cursor: pointer;
+            }
+
+        }
+    }
+
+    &__options-btn {
+        @include util.size(1.7vw, auto, 0, 0);
+        background-color: transparent;
+        transition: util.$TRANS-2;
+        z-index: 2;
+        mix-blend-mode: difference;
+
+        &:hover {
+            transform: translateY(4px);
+        }
+    }
+
+    &__options-list {
+        @include util.flex(start, center, column, start, null);
+        @include util.size(100%, null, 0, 0);
+        max-height: 0;
+        transition: all 0.9s ease-in-out;
+        overflow: hidden;
+
+
+        top: 0%;
+        cursor: pointer;
+
+        & > * {
+            margin: 0 0 20px;
+        }
+
+        & > *:hover {
+            transform: translateY(4px);
+        }
+    }
+
+    &__project-name {
+        @include util.setFont(util.$PROJECT_CARD_TITLE_FONT_SIZE util.$FONT-PRIM, 300, util.$INV_FONT_COLOR);
+        justify-self: flex-start;
+        margin: 10px 0 0;
+        z-index: 2;
+        text-wrap: nowrap;
+        writing-mode: vertical-rl;
+        overflow: hidden;
+    }
+
+    //======| Active Classes |======//
+
+    .sidebar-card__hover-options-trigger {
+        @include util.size(clamp(25px, 2.3vw, 45px), auto, 10px 0 10px, 0);
+    }
+
+    .sidebar-card__active-menu {
+        left: 0;
+        rotate: 0deg;
+    }
+
+    &__active-mask::after {
+        left: 0;
+    }
+
+    &__active-options-list {
+        max-height: 500px;
+        transition: all 0.3s ease-in-out;
+    }
+}
+
+@container sidebar-title (height < 100vh) {
+    .sidebar-card__project-name {
+        font-size: 1.8vw;
+    }
+}
