@@ -45,13 +45,13 @@ export const SamePageLayout = () => {
 
       if (scrollPosition >= aboutRefOffset && scrollPosition < projectsRefOffset) {
         setActivePage("about");
-        goToSection("/about");
+        goToSection("/jordondev/about");
       } else if (scrollPosition >= projectsRefOffset && scrollPosition < contactRefOffset) {
         setActivePage("projects");
-        goToSection("/projects");
+        goToSection("/jordondev/projects");
       } else if (scrollPosition > contactRefOffset) {
         setActivePage("contact");
-        goToSection("/contact");
+        goToSection("/jordondev/contact");
       }
     };
 
