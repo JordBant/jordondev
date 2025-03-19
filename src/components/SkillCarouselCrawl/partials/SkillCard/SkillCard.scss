@@ -1,9 +1,0 @@
-@use '../../../../styles/partials/index' as util;
-
-.skill-card{
-    .skill-icon{
-        $icon-size: util.$ICON_SIZE;
-        @include util.size($icon-size, $icon-size, 0, 0);
-        transition: 0.5s all cubic-bezier(.23,.75,.28,.9);
-    }
-}

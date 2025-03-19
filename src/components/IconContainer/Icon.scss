@@ -1,4 +1,4 @@
-@use '../../styles/partials/index' as util;
+@use '/src/app/styles/partials/index' as util;
 
 .icon-container{
     @include util.flex(center, center, null, null, null);

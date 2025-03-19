@@ -1,4 +1,4 @@
-@use '../../styles/partials/index' as util;
+@use '/src/app/styles/partials/index' as util;
 
 .contact-page-container {
     @include util.flex(start, center, null, null, null);

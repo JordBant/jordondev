@@ -1,4 +1,4 @@
-@use '../../styles/partials/index' as util;
+@use '/src/app/styles/partials/index' as util;
 
 .page-side-title-wrapper {
     @include util.size(100vw, 100vh, 0, 0);

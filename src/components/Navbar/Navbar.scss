@@ -1,4 +1,4 @@
-@use '../../styles/partials/index' as util;
+@use '/src/app/styles/partials/index' as util;
 
 .header-menu {
     @include util.size(100%, 120px, 0 auto, 0 0 10px);

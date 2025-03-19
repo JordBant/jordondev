@@ -34,7 +34,8 @@ export const Contact: FC = () => {
       classNames="contact-page-container"
       containerClassNames="contact-form-container"
     >
-      <form className="contact-form">
+      <div></div>
+      {/* <form className="contact-form">
         <section className="input-container">
           <LabeledInput
             cssStyles={{ marginRight: "59px" }}
@@ -61,9 +62,7 @@ export const Contact: FC = () => {
                 className={`form-submit-btn ${showSubmitButton ? "show-submit-button" : ""}`}
                 onClick={(e) => {
                   e.preventDefault();
-                  /**
-                   * window.location that opens mail client
-                   */
+                  // window.location that opens mail client
                   window.location.href = `
               mailto:jaybdev25@gmail.com?body=${formValues.message}&subject=${encodeURI(formValues.subject ?? "")}${encodeURI(` | ` + formValues.name ?? "")}${encodeURI(` from ` + formValues.affiliation ?? "")}`;
                 }}
@@ -85,7 +84,7 @@ export const Contact: FC = () => {
             }}
           />
         </div>
-      </form>
+      </form> */}
     </SideTitlePage>
   );
 };

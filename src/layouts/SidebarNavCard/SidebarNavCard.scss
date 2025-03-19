@@ -1,4 +1,4 @@
-@use '../../styles/partials/_index.scss' as util;
+@use '/src/app/styles/partials/index' as util;
 
 .sidebar-card {
     @include util.size(100%, 100%, 0, 0);

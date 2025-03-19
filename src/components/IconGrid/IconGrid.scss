@@ -1,0 +1,27 @@
+@use '/src/app/styles/partials/index' as util;
+
+.icon-grid {
+    @include util.size(100%, 100%, 0, 10px 0 0);
+    @include util.debug(red);
+    background: black;
+
+    // box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(80px, 1fr));
+    gap: 7px;
+    place-items: center;
+
+    & > * {
+        // @include util.debug(red);
+        // border-width: 20px;
+        width: 150px;
+        height: 150px;
+
+        // @include util.size(120px, clamp(80px, 12.3vh, 120px), 0, 0);
+        // @include util.size(120px, 120px, 0, 0);
+    }
+
+    // .skill-in-grid {
+    //     @include util.size(auto, clamp(80px, 12.3vh, 120px), 0, 0);
+    // }
+}

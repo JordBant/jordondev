@@ -1,15 +1,15 @@
-@use '../../styles/partials/' as util;
+@use '/src/app/styles/partials/index' as util;
 
 .about-body-container {
+    @include util.size(100vw, 100vh, 0, 0);
+    position: relative;
     background: util.$BKGR-PAGE-BLK;
     background-size: util.$BKGR-SIZE;
     overflow: hidden;
-    height: 120vh;
 
     .about_body {
         @include util.size(auto, 100%, 0 0 0 3vw, 0);
-        @include util.flex(center, flex-start, column, NULL, NULL);
-        z-index: 1;
+        @include util.flex(center, flex-end, column, NULL, NULL);
 
         & > * {
             margin: 3px 0;
@@ -17,24 +17,20 @@
 
         .about_salutations {
             @include util.setFont(util.$TITLE_DYNAMIC_FONT_SIZE util.$FONT-PRIM, 400, util.$TEXT-PRIM);
-            @include util.size(20%, auto, NULL, 0);
-
-            line-height: 0.8;
-            opacity: 1;
-            animation: SalutationsSpacingAnim 0.83s cubic-bezier(0.075, 0.765, 0.82, 1);
+            @include util.flex(center, flex-end, column, NULL, NULL);
+            line-height: 0.9;
 
             & > span {
                 @include util.orangeFontGradient();
                 // animation: GlidingColorFontGradient 8.4s linear infinite;
                 background-size: 200% auto;
                 font-weight: 900;
-                z-index: 99;
+                z-index: 1;
             }
         }
 
         .about_body_text {
             @include util.setFont(util.$BODY_DYNAMIC_FONT_SIZE util.$FONT-PRIM, 400, util.$TEXT-PRIM);
-            @include util.size(55%, auto, 2vw 0, 0);
             // mix-blend-mode: util.$FONT-BLEND-ALT;
         }
 
@@ -62,7 +58,7 @@
             }
 
             & > * {
-                z-index: 99;
+                z-index: 1;
             }
 
             a > .offsite-button {
@@ -74,6 +70,18 @@
                 }
             }
         }
+    }
+
+    &::after {
+        content: '';
+        @include util.size(100%, 40%, 0, 0);
+        bottom: -40%;
+        background: rgb(0, 0, 0);
+        position: absolute;
+        border-radius: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        box-shadow: 0px -52px 1000px 80px rgb(0, 0, 0);
     }
 }
 

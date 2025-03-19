@@ -1,4 +1,8 @@
 {
+  "references": [
+    // { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" }
+  ],
   "compilerOptions": {
     "target": "ESNext",
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
@@ -17,12 +21,13 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
-  },
-  "paths": {
-    "@/*": ["public/*"],
-    "@favicons/*": ["public/assets/*"]
-  },
-  "include": ["src"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+    "noFallthroughCasesInSwitch": true,
+
+    /* For Hosting */
+    "baseUrl": "/",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  }
 }
+

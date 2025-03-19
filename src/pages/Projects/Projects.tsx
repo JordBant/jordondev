@@ -8,7 +8,7 @@ export const Projects: FC = () => {
   let compatibleNum = 3;
 
   return (
-    <SideTitlePage pageTitle="Projects" pageId="projects" classNames="projects-container">
+    <main className="projects-container">
       {/* <SkillCarouselCrawl /> */}
       <section className="project-display-board">
         {["Grid container", "Grid container", "Grid container", "Grid container", "Grid container"].map(
@@ -24,7 +24,7 @@ export const Projects: FC = () => {
           },
         )}
       </section>
-    </SideTitlePage>
+    </main>
   );
 };
 

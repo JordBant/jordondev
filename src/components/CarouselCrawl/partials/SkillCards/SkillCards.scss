@@ -1,0 +1,7 @@
+// @use '/src/app/styles/partials/index' as util;
+@use '/src/app/styles/partials/index' as util;
+
+.skill-card-container {
+    @include util.flex(space-around, center, row, NULL, NULL);
+    @include util.size(100vw, auto, 0, 0);
+}

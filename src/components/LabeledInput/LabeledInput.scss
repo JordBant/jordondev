@@ -1,4 +1,4 @@
-@use '../../styles/partials/index' as util;
+@use '/src/app/styles/partials/index' as util;
 
 .form-input-container {
     @include util.size(100%, auto, 0, 0);
