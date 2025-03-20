@@ -30,7 +30,7 @@ export const PinCard = ({
   return (
     // <div>{children}</div>
     <div
-      className={`relative group/pin pin-card-container ${containerClassName ?? ""}`}
+      className={`pin-hover pin-card-container ${containerClassName ?? ""}`}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
     >
@@ -40,12 +40,12 @@ export const PinCard = ({
             transform: transform,
             transition: "450ms",
           }}
-          className="pin-card-inner group-hover/pin:border-white/[0.2] transition duration-700 overflow-hidden"
+          className="pin-card-inner"
         >
           <div className={`pin-content ${className ?? ""}`}>{children}</div>
         </div>
       </div>
-      {/* <PinPerspective title={title ?? "Test 1"} href={href} /> */}
+      <PinPerspective title={title ?? "Test 1"} href={href} />
     </div>
   );
 };
