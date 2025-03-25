@@ -1,6 +1,6 @@
 import { FC, forwardRef, LegacyRef } from "react";
 import { Icons, SKILL_ICONS } from "../../store";
-import { Icon } from "../IconContainer/Icon";
+import { Icon } from "../Icons/Icon";
 import { PinCard } from "../PinCard/PinCard";
 import "./IconGrid.scss";
 
@@ -9,7 +9,7 @@ export const IconGrid = forwardRef(({ id }: { id: string }, ref) => {
     <div ref={ref as LegacyRef<HTMLDivElement> | undefined} className="icon-grid" id={id}>
       {SKILL_ICONS.map((icon) => {
         return (
-          <PinCard>
+          <PinCard title={icon.name} color={icon.fontColor}>
             <Icon iconElement={icon.name as Icons} classNames="skill-in-grid" />;
           </PinCard>
         );

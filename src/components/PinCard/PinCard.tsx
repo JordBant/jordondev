@@ -5,13 +5,13 @@ import "./PinCard.scss";
 export const PinCard = ({
   children,
   title,
-  href,
+  color,
   className,
   containerClassName,
 }: {
   children: React.ReactNode;
   title?: string;
-  href?: string;
+  color?: string;
   className?: string;
   containerClassName?: string;
 }) => {
@@ -28,7 +28,6 @@ export const PinCard = ({
   };
 
   return (
-    // <div>{children}</div>
     <div
       className={`pin-hover pin-card-container ${containerClassName ?? ""}`}
       onMouseEnter={onMouseEnter}
@@ -45,7 +44,7 @@ export const PinCard = ({
           <div className={`pin-content ${className ?? ""}`}>{children}</div>
         </div>
       </div>
-      <PinPerspective title={title ?? "Test 1"} href={href} />
+      <PinPerspective color={color ?? "white"} title={title ?? "Test 1"} />
     </div>
   );
 };

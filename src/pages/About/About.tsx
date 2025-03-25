@@ -4,7 +4,7 @@ import "./About.scss";
 
 export const About = forwardRef(({id}: { id: string }, ref) => {
   return (
-    <main className="about-body-container" id={id} ref={ref as LegacyRef<HTMLElement> | undefined}>
+    <section className="about-body-container" id={id} ref={ref as LegacyRef<HTMLElement> | undefined}>
       {/* <Navbar {...props} /> */}
       <section className="about_body">
         <BackgroundBoxes />
@@ -25,7 +25,7 @@ export const About = forwardRef(({id}: { id: string }, ref) => {
           </button>
         </div>
       </section>
-    </main>
+    </section>
   );
 });
 

@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Icon } from "../../../IconContainer/Icon";
+import { Icon } from "../../../Icons/Icon";
 import { SkillCardProps } from "../../CarouselCrawl.types";
 import "./SkillCard.scss";
 import { TitleOverlayCard } from "../../../../layouts/TitleOverlayCard/TitleOverlayCard";

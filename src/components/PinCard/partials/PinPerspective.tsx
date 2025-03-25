@@ -1,15 +1,15 @@
 import { motion } from "motion/react";
 import "./PinPerspective.scss";
 
-export const PinPerspective = ({ title, href }: { title?: string; href?: string }) => {
+export const PinPerspective = ({ title, color }: { title?: string; color: string }) => {
   return (
     <motion.div className="pin-wrapper make-visible group-hover/pin:opacity-100">
       <div className="pin-container">
         <div className="pin-title-container-outer">
-          <a className="pin-title-container-inner" target={"_blank"} href={href}>
+          <h3 className="pin-title-container-inner">
             <span className="pin-title">{title}</span>
             <span className="pin-sub make-slighly-visible" />
-          </a>
+          </h3>
         </div>
 
         <div
@@ -39,7 +39,7 @@ export const PinPerspective = ({ title, href }: { title?: string; href?: string 
                 delay: 0,
               }}
               className="anim-container-one"
-            />
+            ></motion.div>
             <motion.div
               initial={{
                 opacity: 0,
@@ -59,7 +59,7 @@ export const PinPerspective = ({ title, href }: { title?: string; href?: string 
                 delay: 2,
               }}
               className="anim-container-one"
-            />
+            ></motion.div>
             <motion.div
               initial={{
                 opacity: 0,
@@ -79,15 +79,18 @@ export const PinPerspective = ({ title, href }: { title?: string; href?: string 
                 delay: 4,
               }}
               className="anim-container-one"
-            />
+            ></motion.div>
           </>
         </div>
 
         <>
-          <motion.div style={{ filter: "blur(2px)" }} className="anim-container-two extend-height" />
-          <motion.div className="anim-container-two extend-height" />
-          <motion.div style={{ filter: "blur(3px)" }} className=" anim-container-three" />
-          <motion.div className=" anim-container-three anim-container-three-ext" />
+          <motion.div
+            style={{ filter: "blur(2px)" }}
+            className="anim-container-two extend-height"
+          ></motion.div>
+          <motion.div className="anim-container-two extend-height"></motion.div>
+          <motion.div style={{ filter: "blur(3px)" }} className=" anim-container-three"></motion.div>
+          <motion.div className=" anim-container-three anim-container-three-ext"></motion.div>
         </>
       </div>
     </motion.div>

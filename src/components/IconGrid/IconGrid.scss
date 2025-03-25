@@ -1,11 +1,12 @@
 @use '/src/app/styles/partials/index' as util;
 
 .icon-grid {
-    @include util.size(100%, 100%, 0, 10px 0 0);
+    @include util.size(70%, 100%, 0, 0 100px 0 0);
+    z-index: 101;
 
     background: black;
     display: grid;
-    grid-template-columns: repeat(5, minmax(80px, 1fr));
+    grid-template-columns: repeat(3, minmax(80px, 1fr));
     gap: 7px;
     place-items: center;
 

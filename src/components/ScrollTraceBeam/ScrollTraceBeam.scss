@@ -1,0 +1,56 @@
+.tracing-beam {
+    position: relative;
+    width: auto;
+    height: auto;
+    z-index: 9998;
+    overflow: hidden;
+
+    &__indicator-container {
+        // border: 2px solid red;
+        position: absolute;
+        top: 0.75rem; // top-3
+        left: 0; // -left-4
+        // left: 0;
+        z-index: 9999;
+
+        // @media (min-width: 768px) {
+        //     left: -5rem; // md:-left-20
+        // }
+    }
+
+    &__indicator-wrapper {
+        margin-left: 27px;
+        display: flex;
+        // height: 1rem; // h-4
+        // width: 1rem; // w-4
+        align-items: center;
+        justify-content: center;
+        border-radius: 9999px; // rounded-full
+        // border: 1px solid #e5e5e5; // border-neutral-200
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06); // shadow-sm
+    }
+
+    &__indicator-dot {
+        height: 0.5rem; // h-2
+        width: 0.5rem; // w-2
+        border-radius: 9999px; // rounded-full
+        border: 1px solid #d4d4d4; // border-neutral-300
+        background-color: white; // bg-white
+    }
+
+    &__svg {
+        margin-left: 1rem; // ml-4
+        display: block;
+    }
+
+    &__path-highlight {
+        @media (prefers-reduced-motion: reduce) {
+            display: none; // motion-reduce:hidden
+        }
+    }
+
+    &__child-wrapper {
+        width: 100%;
+        height: auto;
+    }
+}

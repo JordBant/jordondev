@@ -46,15 +46,16 @@
     }
 }
 
-.pin-hover:hover{
-    .make-visible{
+.pin-hover:hover {
+    .make-visible {
         opacity: 1;
     }
-    .make-slightly-visible{
+
+    .make-slightly-visible {
         opacity: 0.4;
     }
 
-    .extend-height{
+    .extend-height {
         height: 10rem;
     }
 }

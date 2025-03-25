@@ -5,6 +5,8 @@ import { About } from "../pages";
 import "./styles/App.scss";
 import { IconGrid } from "../components/IconGrid/IconGrid";
 import { Experince } from "../pages/Experience/Experince";
+import { ScrollTraceBeam } from "../components/ScrollTraceBeam/ScrollTraceBeam";
+import { div } from "motion/react-client";
 
 function App() {
   const aboutRef = useRef<HTMLDivElement | null>(null);
@@ -30,11 +32,17 @@ function App() {
     //   <Route path="*" element={
     //   } />
     // </Routes>
-    <>
-      <SidebarNavBubbles sections={allSections} />
-      <About id={"about"} ref={aboutRef} />
-      <Experince id={"experience"} ref={experienceRef} />
-    </>
+    // <div style={{minWidth: '100vw'}}>
+      <ScrollTraceBeam>
+        <About id={"about"} ref={aboutRef} />
+        <Experince id={"experience"} ref={experienceRef} />
+      </ScrollTraceBeam>
+    // </div>
+    // <>
+    //   <SidebarNavBubbles sections={allSections} />
+    //   <About id={"about"} ref={aboutRef} />
+    //   <Experince id={"experience"} ref={experienceRef} />
+    // </>
   );
 }
 
