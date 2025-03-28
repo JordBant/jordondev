@@ -1,7 +1,7 @@
 @use '/src/app/styles/partials/index' as util;
 
 .about-body-container {
-    @include util.size(100%, 120vh, 0, 0);
+    @include util.size(100%, 120vh, 0, 0 90px);
     position: relative;
     background: util.$BKGR-PAGE-BLK;
     background-size: util.$BKGR-SIZE;

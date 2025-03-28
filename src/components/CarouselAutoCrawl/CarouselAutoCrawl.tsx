@@ -3,9 +3,9 @@ import React, {
   // useState
 } from "react";
 import { SkillCards } from "./partials/SkillCards/SkillCards";
-import "./CarouselCrawl.scss";
+import "./CarouselAutoCrawl.scss";
 
-export const CarouselCrawl: FC<{ children: React.ReactElement }> = ({ children }): React.ReactElement => {
+export const CarouselAutoCrawl: FC<{ children: React.ReactElement }> = ({ children }): React.ReactElement => {
   const mapComponentsByClassName = ["ticker__initial", "ticker__next", "ticker__next"];
   // TODO; const [isHovered, setIsHovered] = useState(false);
 

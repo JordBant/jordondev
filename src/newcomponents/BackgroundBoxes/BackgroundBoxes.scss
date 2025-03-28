@@ -7,7 +7,7 @@
     position: absolute;
     top: -25%;
     left: 25%;
-    z-index: 2;
+    // z-index: 2;
 
     .background-boxes-rows {
         @include util.size(18rem, 9rem, null, null);

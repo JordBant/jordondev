@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { Icon } from "../../../Icons/Icon";
-import { SkillCardProps } from "../../CarouselCrawl.types";
+import { SkillCardProps } from "../../CarouselAutoCrawl.types";
 import "./SkillCard.scss";
 
 export const SkillCard: FC<SkillCardProps> = ({
