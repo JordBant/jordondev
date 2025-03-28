@@ -11,6 +11,15 @@
     place-items: center;
 
     & > * {
-        @include util.size(clamp(85px, 15vw, 140px), clamp(85px, 20vh, 130px), 0, 0);
+        @include util.size(clamp(105px, 14vw, 140px), clamp(105px, 14vh, 130px), 0, 0);
+        fill: rgba(64, 77, 00, 0.8);
+        filter: grayscale(100%);
+        fill-opacity: 0.5;
+
+        &:hover {
+            fill: rgb(0, 172, 187);
+            filter: grayscale(0%);
+            fill-opacity: 0.8;
+        }
     }
 }

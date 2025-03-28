@@ -1,21 +1,29 @@
 @use '/src/app/styles/partials/index' as util;
 
-.ticker__wrapper {
-    @include util.size(100%, auto, 20px 0 0, 20px 0 150px);
+.ticker-wrapper {
+    @include util.size(100%, 100%, 0, 0);
 
     position: relative;
     overflow: hidden;
     background-color: util.$BKGR-PAGE-BLK;
 
-    & > .ticker {
-
-        @include util.size(100%, auto, 0, 0);
+    .ticker {
+        @include util.size(auto, 100%, 0, 0);
         @include util.flex(center, center, null, null, null);
+
         white-space: nowrap;
-        padding: 0;
-        margin: 0;
 
         animation: util.$TICKER_CRAWL_ANIMATION 40s linear infinite running;
+
+        &__content {
+            @include util.size(auto, 100%, 0, 0);
+            @include util.flex(center, center, null, null, null);
+
+            & > * {
+                border: 1px solid blue;
+                width: 500px;
+            }
+        }
 
         &:hover {
             animation-play-state: paused;

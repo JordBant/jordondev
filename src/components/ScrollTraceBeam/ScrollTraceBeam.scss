@@ -1,12 +1,11 @@
 .tracing-beam {
     position: relative;
-    width: auto;
-    height: auto;
+    // width: auto;
+    // height: auto;
     z-index: 9998;
     overflow: hidden;
 
     &__indicator-container {
-        // border: 2px solid red;
         position: absolute;
         top: 0.75rem; // top-3
         left: 0; // -left-4

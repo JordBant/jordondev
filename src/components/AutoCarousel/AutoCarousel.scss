@@ -1,0 +1,358 @@
+/* 
+ * Infinite Scroll Component Styles
+ * A comprehensive stylesheet for the infinite scrolling card component
+ */
+
+// ==============================
+// Variables
+// ==============================
+
+// Layout & Sizing
+$card-width: 16rem;
+$card-height: 10rem;
+$container-max-width: 56rem;
+$border-radius: 0.5rem;
+
+// Spacing
+$spacing-1: 0.25rem;
+$spacing-2: 0.5rem;
+$spacing-4: 1rem;
+$spacing-6: 1.5rem;
+
+// Typography
+$font-size-xl: 1.25rem;
+$font-size-2xl: 1.5rem;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+
+// Colors
+$card-border-color: rgba(0, 0, 0, 0.1);
+$card-shadow-color: rgba(0, 0, 0, 0.05);
+$card-bg-color: #fff;
+$card-text-color: #000;
+
+// Card Colors
+$color-red: #fee2e2;
+$color-blue: #dbeafe;
+$color-green: #dcfce7;
+$color-yellow: #fef9c3;
+$color-purple: #f3e8ff;
+$color-pink: #fce7f3;
+
+// ==============================
+// Component Styles
+// ==============================
+
+// Main wrapper
+.infinite-scroll-wrapper {
+    width: 100%;
+    max-width: $container-max-width;
+    margin-left: auto;
+    margin-right: auto;
+    padding: $spacing-4;
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-4;
+    background-color: white;
+}
+
+// Header
+.infinite-scroll-header {
+    margin-bottom: $spacing-4;
+
+    h2 {
+        font-size: $font-size-2xl;
+        font-weight: $font-weight-bold;
+        margin: 0;
+    }
+}
+
+// Viewport - the visible window that shows the scrolling content
+.infinite-scroll-viewport {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: $spacing-2 0;
+}
+
+// Animated track - contains all cards and moves horizontally
+.infinite-scroll-track {
+    display: flex;
+    flex-direction: row; // Ensure horizontal layout
+    flex-wrap: nowrap; // Prevent wrapping to new line
+    white-space: nowrap; // Additional protection against wrapping
+    width: fit-content; // Allow the track to be as wide as needed
+
+    // Ensure animation properties are explicitly set
+    animation-name: infiniteScroll;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    will-change: transform; // Hardware acceleration hint
+}
+
+// Card wrapper
+.infinite-scroll-card-wrapper {
+    padding: 0 $spacing-2;
+    flex: 0 0 auto; // Don't grow or shrink
+    display: inline-block; // Ensure horizontal layout
+}
+
+// Card
+.infinite-scroll-card {
+    border-radius: $border-radius;
+    border: 1px solid $card-border-color;
+    background-color: $card-bg-color;
+    color: $card-text-color;
+    box-shadow: 0 1px 2px 0 $card-shadow-color;
+    width: $card-width;
+    height: $card-height;
+    display: block; // Ensure proper display
+
+    // Card color variations
+    &.red {
+        background-color: $color-red;
+    }
+
+    &.blue {
+        background-color: $color-blue;
+    }
+
+    &.green {
+        background-color: $color-green;
+    }
+
+    &.yellow {
+        background-color: $color-yellow;
+    }
+
+    &.purple {
+        background-color: $color-purple;
+    }
+
+    &.pink {
+        background-color: $color-pink;
+    }
+}
+
+// Card content
+.infinite-scroll-card-content {
+    padding: $spacing-6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+
+    h3 {
+        font-size: $font-size-xl;
+        font-weight: $font-weight-medium;
+        margin: 0;
+    }
+}
+
+// ==============================
+// Responsive Adjustments
+// ==============================
+
+@media (max-width: 768px) {
+    .infinite-scroll-card {
+        width: 12rem;
+        height: 8rem;
+    }
+
+    .infinite-scroll-card-content {
+        padding: $spacing-4;
+
+        h3 {
+            font-size: 1rem;
+        }
+    }
+}
+
+// ==============================
+// Animations
+// ==============================
+
+@keyframes infiniteScroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+// /* 
+//  * Infinite Scroll Component Styles
+//  * A comprehensive stylesheet for the infinite scrolling card component
+//  */
+
+// // ==============================
+// // Variables
+// // ==============================
+
+// // Layout & Sizing
+// $card-width: 16rem;
+// $card-height: 10rem;
+// $container-max-width: 56rem;
+// $border-radius: 0.5rem;
+
+// // Spacing
+// $spacing-1: 0.25rem;
+// $spacing-2: 0.5rem;
+// $spacing-4: 1rem;
+// $spacing-6: 1.5rem;
+
+// // Typography
+// $font-size-xl: 1.25rem;
+// $font-size-2xl: 1.5rem;
+// $font-weight-medium: 500;
+// $font-weight-bold: 700;
+
+// // Colors
+// $card-border-color: rgba(0, 0, 0, 0.1);
+// $card-shadow-color: rgba(0, 0, 0, 0.05);
+// $card-bg-color: #fff;
+// $card-text-color: #000;
+
+// // Card Colors
+// $color-red: #fee2e2;
+// $color-blue: #dbeafe;
+// $color-green: #dcfce7;
+// $color-yellow: #fef9c3;
+// $color-purple: #f3e8ff;
+// $color-pink: #fce7f3;
+
+// // ==============================
+// // Component Styles
+// // ==============================
+
+// // Main wrapper
+// .infinite-scroll-wrapper {
+//     background-color: white;
+//     width: 100%;
+//     max-width: $container-max-width;
+//     margin-left: auto;
+//     margin-right: auto;
+//     padding: $spacing-4;
+//     display: flex;
+//     flex-direction: column;
+//     gap: $spacing-4;
+//     overflow: hidden;
+// }
+
+// // Header
+// .infinite-scroll-header {
+//     margin-bottom: $spacing-4;
+
+//     h2 {
+//         font-size: $font-size-2xl;
+//         font-weight: $font-weight-bold;
+//         margin: 0;
+//     }
+// }
+
+// // Scroll container
+// .infinite-scroll-container {
+//     position: relative;
+//     overflow: hidden;
+// }
+
+// // Animated track
+// .infinite-scroll-track {
+//     display: inline-flex;
+//     animation-name: scroll;
+//     will-change: transform;
+// }
+
+// // Card wrapper
+// .infinite-scroll-card-wrapper {
+//     padding-left: $spacing-2;
+//     padding-right: $spacing-2;
+//     flex-shrink: 0;
+// }
+
+// // Card
+// .infinite-scroll-card {
+//     border-radius: $border-radius;
+//     border: 1px solid $card-border-color;
+//     background-color: $card-bg-color;
+//     color: $card-text-color;
+//     box-shadow: 0 1px 2px 0 $card-shadow-color;
+//     width: $card-width;
+//     height: $card-height;
+
+//     // Card color variations
+//     &.red {
+//         background-color: $color-red;
+//     }
+
+//     &.blue {
+//         background-color: $color-blue;
+//     }
+
+//     &.green {
+//         background-color: $color-green;
+//     }
+
+//     &.yellow {
+//         background-color: $color-yellow;
+//     }
+
+//     &.purple {
+//         background-color: $color-purple;
+//     }
+
+//     &.pink {
+//         background-color: $color-pink;
+//     }
+// }
+
+// // Card content
+// .infinite-scroll-card-content {
+//     padding: $spacing-6;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     height: 100%;
+
+//     h3 {
+//         font-size: $font-size-xl;
+//         font-weight: $font-weight-medium;
+//         margin: 0;
+//     }
+// }
+
+// // ==============================
+// // Responsive Adjustments
+// // ==============================
+
+// @media (max-width: 768px) {
+//     .infinite-scroll-card {
+//         width: 12rem;
+//         height: 8rem;
+//     }
+
+//     .infinite-scroll-card-content {
+//         padding: $spacing-4;
+
+//         h3 {
+//             font-size: 1rem;
+//         }
+//     }
+// }
+
+// // ==============================
+// // Animations
+// // ==============================
+
+// @keyframes scroll {
+//     0% {
+//         transform: translateX(0);
+//     }
+
+//     100% {
+//         transform: translateX(-50%);
+//     }
+// }

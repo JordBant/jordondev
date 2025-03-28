@@ -5,6 +5,10 @@ export type SkillIcon = {
     fontColor: string,
 };
 
+export type TProject = {
+    name: string;
+};
+
 export type IconMapping = Record<Icons, React.ReactElement> & IconMapIndexSignature;
 
 export type IconMapIndexSignature = {

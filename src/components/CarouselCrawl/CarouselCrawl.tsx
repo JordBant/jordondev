@@ -1,19 +1,21 @@
-import React, { FC, 
-  // useState 
+import React, {
+  FC,
+  // useState
 } from "react";
 import { SkillCards } from "./partials/SkillCards/SkillCards";
 import "./CarouselCrawl.scss";
 
-export const CarouselCrawl: FC = (): React.ReactElement => {
+export const CarouselCrawl: FC<{ children: React.ReactElement }> = ({ children }): React.ReactElement => {
   const mapComponentsByClassName = ["ticker__initial", "ticker__next", "ticker__next"];
   // TODO; const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <div className="ticker__wrapper">
+    <div className="ticker-wrapper">
       <div className="ticker">
-        {mapComponentsByClassName.map((className, idx) => (
-          <div className={`${className}`} key={`${idx}--card`}>
-            <SkillCards />
+        {mapComponentsByClassName.map((byClassName, idx) => (
+          <div className={`${byClassName} ticker__content`} key={`${idx}--card`}>
+            {children}
+            {/* <SkillCards /> */}
           </div>
         ))}
       </div>

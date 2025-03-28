@@ -1,12 +1,9 @@
-import { LegacyRef, useRef } from "react";
-import { SidebarNavBubbles } from "../components/SidebarNavBubbles";
+import { useRef } from "react";
 import { Section } from "../components/SidebarNavBubbles/SidebarNavBubbles.types";
-import { About } from "../pages";
-import "./styles/App.scss";
-import { IconGrid } from "../components/IconGrid/IconGrid";
+import { About, Projects } from "../pages";
 import { Experince } from "../pages/Experience/Experince";
 import { ScrollTraceBeam } from "../components/ScrollTraceBeam/ScrollTraceBeam";
-import { div } from "motion/react-client";
+import "./styles/App.scss";
 
 function App() {
   const aboutRef = useRef<HTMLDivElement | null>(null);
@@ -33,10 +30,11 @@ function App() {
     //   } />
     // </Routes>
     // <div style={{minWidth: '100vw'}}>
-      <ScrollTraceBeam>
-        <About id={"about"} ref={aboutRef} />
-        <Experince id={"experience"} ref={experienceRef} />
-      </ScrollTraceBeam>
+    <ScrollTraceBeam>
+      <About id={"about"} ref={aboutRef} />
+      <Experince id={"experience"} ref={experienceRef} />
+      <Projects />
+    </ScrollTraceBeam>
     // </div>
     // <>
     //   <SidebarNavBubbles sections={allSections} />

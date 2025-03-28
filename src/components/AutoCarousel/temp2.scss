@@ -1,0 +1,23 @@
+.infinite-scroll-wrapper {
+    border: 2px solid orange;
+    width: 100%;
+    // max-width: 56rem; // max-w-4xl
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem; // p-4
+    background-color: white;
+
+    .scroll-container {
+        overflow-x: hidden;
+        white-space: nowrap;
+        padding-top: 1rem; // py-4
+        padding-bottom: 1rem;
+        position: relative;
+
+        .card-wrapper {
+            display: inline-block;
+            padding-left: 0.5rem; // px-2
+            padding-right: 0.5rem;
+        }
+    }
+}

@@ -1,32 +1,35 @@
 @use '/src/app/styles/partials/index' as util;
 
 .projects-container {
-    @include util.flex(center, center, null, null, null);
-    
-    height: 90vh;
+    // @include util.flex(center, center, null, null, null);
+    @include util.size(100vw, 70vh, 0, 0);
+    // border: solid red 2px;
+    background-color: black;
 
-    background-color: util.$BKGR-PAGE-BLK;
-    border-top: 2px solid util.$BORDER-COLOR;
-    border-bottom: 2px solid util.$BORDER-COLOR;
+    // height: 90vh;
 
-    .project-display-board {
-        @include util.size(88%, 100%, 0, 0);
+    // background-color: util.$BKGR-PAGE-BLK;
+    // border-top: 2px solid util.$BORDER-COLOR;
+    // border-bottom: 2px solid util.$BORDER-COLOR;
 
-        display: grid;
-        grid-template-columns: repeat(3, auto);
-        grid-template-rows: repeat(2, auto);
-        grid-row: 2 / span auto;
+    // .project-display-board {
+    //     @include util.size(88%, 100%, 0, 0);
 
-        & > div {
-            color: aliceblue;
-            box-shadow: 0 0 0.8px 0 inset black;
-        }
+    //     display: grid;
+    //     grid-template-columns: repeat(3, auto);
+    //     grid-template-rows: repeat(2, auto);
+    //     grid-row: 2 / span auto;
 
-        .grid-span-column {
-            gap: 20px;
-            grid-row: 1;
-            grid-row-end: 3;
-        }
+    //     & > div {
+    //         color: aliceblue;
+    //         box-shadow: 0 0 0.8px 0 inset black;
+    //     }
 
-    }
+    //     .grid-span-column {
+    //         gap: 20px;
+    //         grid-row: 1;
+    //         grid-row-end: 3;
+    //     }
+
+    // }
 }

@@ -1,16 +1,45 @@
 import { Section } from "../components/SidebarNavBubbles/SidebarNavBubbles.types";
-import { PageTitle, SkillIcon } from "./constants.type";
+import { PageTitle, SkillIcon, TProject } from "./constants.type";
 
 /**
  * Page titles being used
  * ids and the page titles
  */
-export const PAGE_TITLES: Readonly<PageTitle[]> = ["About", "Projects", "Contact"] as const;
+export const PAGE_TITLES: Readonly<PageTitle[]> = [ "About", "Projects", "Contact" ] as const;
+/**
+ * All Project Info
+ */
+export const PROJECTS: TProject[] = [
+  {
+    name: "MediaM",
+  },
+  {
+    name: "The Blu's Clue",
+  },
+  {
+    name: "Pixie URL",
+  },
+  {
+    name: "Fitch Connect",
+  },
+  {
+    name: "Fitch Ratings Pro",
+  },
+  {
+    name: "Business Mutual International",
+  },
+  {
+    name: "Neighbors Restock",
+  },
+  {
+    name: "Asfaw Consultancy",
+  },
+];
 
 /**
  * Icons for sidebar section of each project-display card
  */
-export const SIDEBAR_ICONS = ["VIDEO", "GITHUB", "SPECTACLES"] as const;
+export const SIDEBAR_ICONS = [ "VIDEO", "GITHUB", "SPECTACLES" ] as const;
 
 /**
  * All Icons used in skill carousel
