@@ -2,7 +2,7 @@
     position: relative;
     // width: auto;
     // height: auto;
-    z-index: 9998;
+    z-index: 9997;
     overflow: hidden;
 
     &__indicator-container {
@@ -10,7 +10,7 @@
         top: 0.75rem; // top-3
         left: 0; // -left-4
         // left: 0;
-        z-index: 9999;
+        z-index: 9998;
 
         // @media (min-width: 768px) {
         //     left: -5rem; // md:-left-20

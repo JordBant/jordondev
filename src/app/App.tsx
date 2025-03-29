@@ -1,15 +1,24 @@
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Section } from "../components/SidebarNavBubbles/SidebarNavBubbles.types";
 import { About, Projects } from "../pages";
 import { Experince } from "../pages/Experience/Experince";
 import { ScrollTraceBeam } from "../components/ScrollTraceBeam/ScrollTraceBeam";
 import "./styles/App.scss";
+import { LoadingPage } from "../components/LoadingPage/LoadingPage";
 
 function App() {
   const aboutRef = useRef<HTMLDivElement | null>(null);
   const experienceRef = useRef<HTMLDivElement | null>(null);
   const testimonialsRef = useRef<HTMLDivElement | null>(null);
   const contactRef = useRef<HTMLDivElement | null>(null);
+
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoaded(true);
+    }, 300);
+  }, []);
 
   const allSections: Section[] = [
     {
@@ -31,9 +40,14 @@ function App() {
     // </Routes>
     // <div style={{minWidth: '100vw'}}>
     <ScrollTraceBeam>
-      <About id={"about"} ref={aboutRef} />
-      <Experince id={"experience"} ref={experienceRef} />
-      <Projects />
+      <LoadingPage isLoaded={isLoaded} />
+      {isLoaded && (
+        <>
+          <About id={"about"} ref={aboutRef} />
+          <Experince id={"experience"} ref={experienceRef} />
+          <Projects />
+        </>
+      )}
     </ScrollTraceBeam>
     // </div>
     // <>
