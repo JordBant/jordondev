@@ -7,6 +7,9 @@
     container-name: sidebar-title;
     container-type: size;
 
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
     position: relative;
 
     &__sidebar {

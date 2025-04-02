@@ -6,4 +6,5 @@ export type SidebarOptionsProps = {
 export type SidebarNavCardProps = {
     projectName: string;
     classNames?: string;
+    imageUrl?: string;
 };

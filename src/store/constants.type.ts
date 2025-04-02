@@ -7,6 +7,7 @@ export type SkillIcon = {
 
 export type TProject = {
     name: string;
+    image: string;
 };
 
 export type IconMapping = Record<Icons, React.ReactElement> & IconMapIndexSignature;

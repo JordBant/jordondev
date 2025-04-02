@@ -28,7 +28,7 @@ export const ScrollTraceBeam = ({ children, className = "" }: ScrollTraceBeamPro
     damping: 90,
   });
 
-  const y2 = useSpring(useTransform(scrollYProgress, [0, 1], [50, svgHeight - 200]), {
+  const y2 = useSpring(useTransform(scrollYProgress, [0, 1], [50, svgHeight - 100]), {
     stiffness: 500,
     damping: 90,
   });

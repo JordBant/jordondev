@@ -29,8 +29,8 @@ export const Projects = () => {
       {/* <AutoCarousel /> */}
       <CarouselAutoCrawl>
         <>
-          {PROJECTS.map(({ name }, idx) => {
-            return <SidebarNavCard key={`${name}--${idx}`} projectName={name} />;
+          {PROJECTS.map(({ name, image }, idx) => {
+            return <SidebarNavCard key={`${name}--${idx}`} imageUrl={image} projectName={name} />;
           })}
         </>
       </CarouselAutoCrawl>

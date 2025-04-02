@@ -2,7 +2,7 @@
 
 .projects-container {
     // @include util.flex(center, center, null, null, null);
-    @include util.size(100vw, 70vh, 0, 0);
+    @include util.size(100vw, 70vh, 90px 0 0, 0);
     // border: solid red 2px;
     background-color: black;
 

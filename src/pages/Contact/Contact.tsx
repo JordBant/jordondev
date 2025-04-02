@@ -1,6 +1,4 @@
 import { FC, useState } from "react";
-import { SideTitlePage } from "../../layouts/SideTitlePage/SideTitlePage";
-import { LabeledInput } from "../../components/LabeledInput";
 import "./Contact.scss";
 // import { LabeledInputProps } from "../../components/LabeledInput/LabeledInput.types";
 import { Icon } from "../../components";
@@ -28,14 +26,24 @@ export const Contact: FC = () => {
   };
 
   return (
-    <SideTitlePage
-      pageId="contact"
-      pageTitle="Contact"
-      classNames="contact-page-container"
-      containerClassNames="contact-form-container"
-    >
-      <div></div>
-      {/* <form className="contact-form">
+    // <SideTitlePage
+    //   pageId="contact"
+    //   pageTitle="Contact"
+    //   classNames="contact-page-container"
+    //   containerClassNames="contact-form-container"
+    // >
+    <section className="contact-page">
+      <section className="contact-container">
+        <h1 className="contact-title">
+          Connect With Me
+          <hr style={{ padding: 0, margin: 0, lineHeight: 0, width: "50%", justifySelf: "end" }} />
+        </h1>
+        <section className="contact-body">
+          <section></section>
+        </section>
+      </section>
+    </section>
+    /* <form className="contact-form">
         <section className="input-container">
           <LabeledInput
             cssStyles={{ marginRight: "59px" }}
@@ -84,8 +92,8 @@ export const Contact: FC = () => {
             }}
           />
         </div>
-      </form> */}
-    </SideTitlePage>
+      </form> 
+    /* </SideTitlePage> */
   );
 };
 

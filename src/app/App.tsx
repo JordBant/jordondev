@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { Section } from "../components/SidebarNavBubbles/SidebarNavBubbles.types";
-import { About, Projects } from "../pages";
+import { About, Contact, Projects } from "../pages";
 import { Experince } from "../pages/Experience/Experince";
 import { ScrollTraceBeam } from "../components/ScrollTraceBeam/ScrollTraceBeam";
 import "./styles/App.scss";
@@ -20,19 +19,6 @@ function App() {
     }, 300);
   }, []);
 
-  const allSections: Section[] = [
-    {
-      id: "about",
-      ref: aboutRef,
-      label: "About Me",
-    },
-    {
-      id: "experience",
-      ref: experienceRef,
-      label: "My Experience",
-    },
-  ];
-
   return (
     // <Routes>
     //   <Route path="*" element={
@@ -41,13 +27,12 @@ function App() {
     // <div style={{minWidth: '100vw'}}>
     <ScrollTraceBeam>
       <LoadingPage isLoaded={isLoaded} />
-      {isLoaded && (
-        <>
-          <About id={"about"} ref={aboutRef} />
-          <Experince id={"experience"} ref={experienceRef} />
-          <Projects />
-        </>
-      )}
+      <>
+        <About id={"about"} ref={aboutRef} />
+        <Experince id={"experience"} ref={experienceRef} />
+        <Projects />
+        <Contact />
+      </>
     </ScrollTraceBeam>
     // </div>
     // <>

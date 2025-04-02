@@ -12,27 +12,35 @@ export const PAGE_TITLES: Readonly<PageTitle[]> = [ "About", "Projects", "Contac
 export const PROJECTS: TProject[] = [
   {
     name: "MediaM",
+    image: '/project_images/frpro.jpeg',
   },
   {
     name: "The Blu's Clue",
+    image: '/project_images/bmi.jpg',
   },
   {
     name: "Pixie URL",
+    image: '/project_images/frpro.jepg',
   },
   {
     name: "Fitch Connect",
+    image: '/project_images/fc.jpeg',
   },
   {
     name: "Fitch Ratings Pro",
+    image: '/project_images/bmi.jpg',
   },
   {
     name: "Business Mutual International",
+    image: '/project_images/bmi.jpg',
   },
   {
     name: "Neighbors Restock",
+    image: '/project_images/bmi.jpg',
   },
   {
     name: "Asfaw Consultancy",
+    image: '/project_images/bmi.jpg',
   },
 ];
 
