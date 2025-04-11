@@ -1,8 +1,7 @@
-import { FC } from "react";
-import { SidebarNavCard } from "../../layouts/SidebarNavCard/SidebarNavCard";
 import { PROJECTS } from "../../store";
 import "./Projects.scss";
 import { CarouselAutoCrawl } from "../../components";
+import ProjectCard from "../../components/ProjectCard/ProjectCard";
 
 export const Projects = () => {
   // let compatibleNum = 3;
@@ -29,11 +28,17 @@ export const Projects = () => {
       {/* <AutoCarousel /> */}
       <CarouselAutoCrawl>
         <>
-          {PROJECTS.map(({ name, image }, idx) => {
+          {/* {PROJECTS.map(({ name, image }, idx) => {
             return <SidebarNavCard key={`${name}--${idx}`} imageUrl={image} projectName={name} />;
+          })} */}
+          {PROJECTS.map((project, idx) => {
+            return <ProjectCard key={project.id} project={project} />;
           })}
         </>
       </CarouselAutoCrawl>
+      {/* {PROJECTS.map((project, idx) => {
+        return <ProjectCard key={project.id} project={project} />;
+      })} */}
     </section>
   );
 };

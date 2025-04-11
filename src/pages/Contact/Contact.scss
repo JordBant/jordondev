@@ -23,7 +23,6 @@
     .contact-container {
         @include util.size(100%, 55vh, 0, 0);
         // @include util.debug(cyan);
-
     }
 
     .contact-title {
@@ -34,6 +33,15 @@
         padding-bottom: 0;
         line-height: 0.8;
         text-align: end;
+    }
+
+    .contact-body {
+
+        .contact-list {
+            @include util.flex(center, flex-end, column, NULL, NULL);
+            height: 60%;
+            border: red 2px solid;
+        }
     }
 }
 

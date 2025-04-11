@@ -8,71 +8,41 @@
   font-family: sans-serif;
   padding-right: 70px;
   padding-left: 120px;
-
-  // @media (min-width: 768px) {
-  //   padding-left: 2.5rem;
-  //   padding-right: 2.5rem;
-  // }
-
-  &.dark {
-    background-color: #0a0a0a; // neutral-950
-  }
 }
 
 .timeline-header {
+  @include util.flex(end, end, null, null, null);
+  border: 2px solid red;
   max-width: 80rem;
-  margin-left: auto;
-  margin-right: auto;
-  // padding: 5rem 1rem;
+  margin: 0 auto;
+  padding-top: 130px;
 
-  // @media (min-width: 768px) {
-  //   padding-left: 2rem;
-  //   padding-right: 2rem;
-  // }
+  .timeline-title {
+    font-size: 1.125rem;
+    margin-bottom: 1rem;
+    color: rgb(255, 255, 255);
+    max-width: 56rem;
 
-  // @media (min-width: 1024px) {
-  //   padding-left: 2.5rem;
-  //   padding-right: 2.5rem;
-  // }
+    @media (min-width: 768px) {
+      font-size: 2.25rem;
+    }
+  }
+
+  .timeline-description {
+    color: #ffffff;
+    font-size: 0.875rem;
+    max-width: 24rem;
+    text-align: end;
+
+    border: 2px solid red;
+  }
 
   &::after {
     content: '';
     @include util.size(100%, 0, 0, 0);
     inset: 0;
-    // bottom: -50%;
-    // background: rgb(249, 48, 48);
     position: absolute;
-    // // border-radius: 100%;
-    // left: 50%;
-    // transform: translateX(-50%);
     box-shadow: 0px 25px 70px 100px rgb(0, 0, 0);
-    // box-shadow: 0px -52px 200px 100px rgb(0, 0, 0);
-  }
-}
-
-.timeline-title {
-  font-size: 1.125rem;
-  margin-bottom: 1rem;
-  color: rgb(0, 0, 0);
-
-  max-width: 56rem;
-
-  @media (min-width: 768px) {
-    font-size: 2.25rem;
-  }
-}
-
-.timeline-description {
-  color: #ffffff; // neutral-700
-  font-size: 0.875rem;
-  max-width: 24rem;
-
-  @media (min-width: 768px) {
-    font-size: 1rem;
-  }
-
-  .dark & {
-    color: #d4d4d4; // neutral-300
   }
 }
 
@@ -87,10 +57,10 @@
 .timeline-entry {
   display: flex;
   justify-content: flex-start;
-  padding-top: 2.5rem;
+  padding-top: 1.5rem;
 
   @media (min-width: 768px) {
-    padding-top: 10rem;
+    padding-top: 4rem;
     gap: 2.5rem;
   }
 }

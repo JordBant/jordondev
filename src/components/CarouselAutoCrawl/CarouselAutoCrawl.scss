@@ -4,13 +4,16 @@
     @include util.size(100%, 100%, 0, 0);
     z-index: 100;
 
+    background: black;
     position: relative;
     overflow: hidden;
-    background-color: util.$BKGR-PAGE-BLK;
+    // background-color: util.$BKGR-PAGE-BLK;
 
     .ticker {
         @include util.size(auto, 100%, 0, 0);
         @include util.flex(center, center, null, null, null);
+        background: black;
+
 
         white-space: nowrap;
 
@@ -19,10 +22,13 @@
         &__content {
             @include util.size(auto, 100%, 0, 0);
             @include util.flex(center, center, null, null, null);
+            background: black;
 
             & > * {
-                border: 1px solid blue;
+                background: black;
                 width: 390px;
+                border-radius: 20px;
+                margin: 0 7px 0;
             }
         }
 

@@ -1,0 +1,124 @@
+// ProjectCard.scss
+.project-card {
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        .overlay {
+            opacity: 1;
+        }
+
+        .project-image {
+            transform: scale(1.1);
+        }
+
+        .card-details {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.image-container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.project-image {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease-out;
+}
+
+.card-content {
+    position: absolute;
+    inset: 0;
+    z-index: 20;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-header {
+    .project-title {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: white;
+        transition: transform 0.3s;
+    }
+
+    .year-container {
+        display: flex;
+        align-items: center;
+        margin-top: 0.5rem;
+        color: rgba(255, 255, 255, 0.7);
+
+        .year {
+            font-size: 0.875rem;
+            margin-left: 0.25rem;
+        }
+    }
+}
+
+.card-details {
+    transform: translateY(2rem);
+    opacity: 0;
+    transition: all 0.3s ease-out;
+
+    .project-description {
+        color: rgba(255, 255, 255, 0.9);
+        margin-bottom: 1rem;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .tags-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .tag {
+        background-color: rgba(255, 255, 255, 0.2);
+        color: white;
+
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+    }
+
+    .project-link {
+        display: inline-flex;
+        align-items: center;
+        color: white;
+        font-size: 0.875rem;
+        font-weight: 500;
+
+        &:hover {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        svg {
+            margin-left: 0.25rem;
+        }
+    }
+}

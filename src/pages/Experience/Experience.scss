@@ -43,7 +43,7 @@
 }
 
 .timeline-content-text {
-    color: #262626; // neutral-800
+    color: #fefefe; // neutral-800
     font-size: 0.75rem;
     font-weight: normal;
     margin-bottom: 2rem;
@@ -58,17 +58,13 @@
 }
 
 .timeline-content-text-small {
-    color: #262626; // neutral-800
+    color: #fefefe; // neutral-800
     font-size: 0.75rem;
     font-weight: normal;
     margin-bottom: 1rem;
 
     @media (min-width: 768px) {
         font-size: 0.875rem;
-    }
-
-    .dark & {
-        color: #e5e5e5; // neutral-200
     }
 }
 

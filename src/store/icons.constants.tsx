@@ -541,3 +541,162 @@ export const ICON_MAP = {
     </svg>
   ),
 } as const;
+/**
+ * Data for Timeline
+ */
+export const TIMELINE_DATA = [
+  {
+    title: "December 2021",
+    content: (
+      <div>
+        <p className="timeline-content-text">
+          Graduated with a Bachelors of Science in Computer Science from the University at Albany, SUNY
+        </p>
+        <div className="timeline-image-grid">
+          <img
+            src="https://assets.aceternity.com/templates/startup-1.webp"
+            alt="startup template"
+            width={500}
+            height={500}
+            loading="lazy"
+            className="timeline-image"
+          />
+          <img
+            src="https://assets.aceternity.com/templates/startup-2.webp"
+            alt="startup template"
+            width={500}
+            height={500}
+            loading="lazy"
+            className="timeline-image"
+          />
+          <img
+            src="https://assets.aceternity.com/templates/startup-3.webp"
+            alt="startup template"
+            width={500}
+            height={500}
+            loading="lazy"
+            className="timeline-image"
+          />
+          <img
+            src="https://assets.aceternity.com/templates/startup-4.webp"
+            alt="startup template"
+            width={500}
+            height={500}
+            loading="lazy"
+            className="timeline-image"
+          />
+        </div>
+      </div>
+    ),
+  },
+  {
+    title: "September 2022",
+    content: (
+      <div>
+        <p className="timeline-content-text">Joined Fitch Solutions as a Software Engineer</p>
+        <p className="timeline-content-text-small">
+          Started Working on Fitch's legacy application;{" "}
+          <span>
+            <a href="">FitchConnect</a>
+          </span>
+        </p>
+        {/* <p className="timeline-content-text-small">Published internal business component with Storybook</p> */}
+        <div className="timeline-checklist-container">
+          <div className="timeline-checklist-item">✅ Optimized and introduced new features for Vue components</div>
+          <div className="timeline-checklist-item">✅ Iterated on existing Node.js middleware functinonaly</div>
+          <div className="timeline-checklist-item">✅ Random file upload lol</div>
+          <div className="timeline-checklist-item">✅ Himesh Reshammiya Music CD</div>
+          <div className="timeline-checklist-item">✅ Salman Bhai Fan Club registrations open</div>
+        </div>
+
+        <div className="timeline-image-grid">
+          <img
+            src="https://assets.aceternity.com/pro/hero-sections.png"
+            alt="hero template"
+            width={500}
+            height={500}
+            loading="lazy"
+            className="timeline-image"
+          />
+          <img
+            src="https://assets.aceternity.com/features-section.png"
+            alt="feature template"
+            width={500}
+            height={500}
+            loading="lazy"
+            className="timeline-image"
+          />
+          <img
+            src="https://assets.aceternity.com/pro/bento-grids.png"
+            alt="bento template"
+            width={500}
+            height={500}
+            loading="lazy"
+            className="timeline-image"
+          />
+          <img
+            src="https://assets.aceternity.com/cards.png"
+            alt="cards template"
+            width={500}
+            height={500}
+            loading="lazy"
+            className="timeline-image"
+          />
+        </div>
+      </div>
+    ),
+  },
+  {
+    title: "2023",
+    content: (
+      <div>
+        <p className="timeline-content-text-small">
+          Developed 5+ micro-frontend applications in React Typescript
+        </p>
+        <p className="timeline-content-text-small">Published internal business component with Storybook</p>
+        <div className="timeline-checklist-container">
+          <div className="timeline-checklist-item">✅ Card grid component</div>
+          <div className="timeline-checklist-item">✅ Startup template Aceternity</div>
+          <div className="timeline-checklist-item">✅ Random file upload lol</div>
+          <div className="timeline-checklist-item">✅ Himesh Reshammiya Music CD</div>
+          <div className="timeline-checklist-item">✅ Salman Bhai Fan Club registrations open</div>
+        </div>
+        <div className="timeline-image-grid">
+          <img
+            src="https://assets.aceternity.com/pro/hero-sections.png"
+            alt="hero template"
+            width={500}
+            height={500}
+            loading="lazy"
+            className="timeline-image"
+          />
+          <img
+            src="https://assets.aceternity.com/features-section.png"
+            alt="feature template"
+            width={500}
+            height={500}
+            loading="lazy"
+            className="timeline-image"
+          />
+          <img
+            src="https://assets.aceternity.com/pro/bento-grids.png"
+            alt="bento template"
+            width={500}
+            height={500}
+            loading="lazy"
+            className="timeline-image"
+          />
+          <img
+            src="https://assets.aceternity.com/cards.png"
+            alt="cards template"
+            width={500}
+            height={500}
+            loading="lazy"
+            className="timeline-image"
+          />
+        </div>
+      </div>
+    ),
+  },
+];
+

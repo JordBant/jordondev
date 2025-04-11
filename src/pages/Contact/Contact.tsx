@@ -39,7 +39,11 @@ export const Contact: FC = () => {
           <hr style={{ padding: 0, margin: 0, lineHeight: 0, width: "50%", justifySelf: "end" }} />
         </h1>
         <section className="contact-body">
-          <section></section>
+         <ul className="contact-list">
+          <li className="contact-list-item">
+            LinkedIn
+          </li>
+         </ul>
         </section>
       </section>
     </section>

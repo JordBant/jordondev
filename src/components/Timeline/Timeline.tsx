@@ -1,14 +1,9 @@
-"use client"
 import { useScroll, useTransform, motion } from "motion/react"
 import { useEffect, useRef, useState } from "react"
+import { TIMELINE_DATA } from "../../store/icons.constants";
 import "./Timeline.scss"
 
-interface TimelineEntry {
-  title: string
-  content: React.ReactNode
-}
-
-export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
+export const Timeline = () => {
   const ref = useRef<HTMLDivElement>(null)
   const containerRef = useRef<HTMLDivElement>(null)
   const [height, setHeight] = useState(0)
@@ -38,7 +33,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
       </div>
 
       <div ref={ref} className="timeline-content">
-        {data.map((item, index) => (
+        {TIMELINE_DATA.map((item, index) => (
           <div key={index} className="timeline-entry">
             <div className="timeline-marker-container">
               <div className="timeline-marker">
@@ -49,7 +44,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
 
             <div className="timeline-entry-content">
               <h3 className="timeline-entry-title-mobile">{item.title}</h3>
-              {item.content}{" "}
+              {item.content}
             </div>
           </div>
         ))}
