@@ -2,7 +2,6 @@ import React, {
   FC,
   // useState
 } from "react";
-import { SkillCards } from "./partials/SkillCards/SkillCards";
 import "./CarouselAutoCrawl.scss";
 
 export const CarouselAutoCrawl: FC<{ children: React.ReactElement }> = ({ children }): React.ReactElement => {

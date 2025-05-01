@@ -1,4 +1,4 @@
-import { FC, forwardRef, LegacyRef } from "react";
+import { forwardRef, LegacyRef } from "react";
 import { BackgroundBoxes } from "../../components/BackgroundBoxes/BackgroundBoxes";
 import "./About.scss";
 

@@ -8,8 +8,8 @@ import { LoadingPage } from "../components/LoadingPage/LoadingPage";
 function App() {
   const aboutRef = useRef<HTMLDivElement | null>(null);
   const experienceRef = useRef<HTMLDivElement | null>(null);
-  const testimonialsRef = useRef<HTMLDivElement | null>(null);
-  const contactRef = useRef<HTMLDivElement | null>(null);
+  // const testimonialsRef = useRef<HTMLDivElement | null>(null);
+  // const contactRef = useRef<HTMLDivElement | null>(null);
 
   const [isLoaded, setIsLoaded] = useState(false);
 

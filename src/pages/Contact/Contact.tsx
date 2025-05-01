@@ -1,7 +1,6 @@
 import { FC, useState } from "react";
 import "./Contact.scss";
 // import { LabeledInputProps } from "../../components/LabeledInput/LabeledInput.types";
-import { Icon } from "../../components";
 
 type FormBody = {
   name: string;
