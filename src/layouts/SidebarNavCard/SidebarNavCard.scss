@@ -1,4 +1,4 @@
-@use '../../styles/partials/_index.scss' as util;
+@use '/src/app/styles/partials/index' as util;
 
 .sidebar-card {
     @include util.size(100%, 100%, 0, 0);
@@ -7,13 +7,32 @@
     container-name: sidebar-title;
     container-type: size;
 
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
     position: relative;
+
+    &::after {
+        // @include util.glassMask();
+
+        content: '';
+        @include util.size(100%, 100%, 0, 0);
+
+        inset: 0;
+        position: absolute;
+        background: rgba(94, 94, 94, 0.776);
+        box-shadow: inset 0 8px 92px 0 rgba(1, 4, 47, 0.37);
+        backdrop-filter: blur(6.5px);
+        border-radius: 20px;
+        -webkit-backdrop-filter: blur(6.5px);
+    }
 
     &__sidebar {
         @include util.size(auto, 100%, 0, 0 7px 0);
         @include util.flex(start, center, column, null, null);
         overflow: hidden;
         position: relative;
+        border-radius: 20px 0 0 20px;
 
         &::after {
             @include util.size(100%, 100%, 0, 0);

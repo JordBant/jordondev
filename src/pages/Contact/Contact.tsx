@@ -1,6 +1,4 @@
 import { FC, useState } from "react";
-import { SideTitlePage } from "../../layouts/SideTitlePage/SideTitlePage";
-import { LabeledInput } from "../../components/LabeledInput";
 import "./Contact.scss";
 // import { LabeledInputProps } from "../../components/LabeledInput/LabeledInput.types";
 import { Icon } from "../../components";
@@ -28,13 +26,51 @@ export const Contact: FC = () => {
   };
 
   return (
-    <SideTitlePage
-      pageId="contact"
-      pageTitle="Contact"
-      classNames="contact-page-container"
-      containerClassNames="contact-form-container"
-    >
-      <form className="contact-form">
+    // <SideTitlePage
+    //   pageId="contact"
+    //   pageTitle="Contact"
+    //   classNames="contact-page-container"
+    //   containerClassNames="contact-form-container"
+    // >
+    <section className="contact-page">
+      <section className="contact-container">
+        <h1 className="contact-title">
+          Connect
+          <hr
+            style={{
+              padding: 0,
+              margin: 0,
+              marginTop: "10px",
+              lineHeight: 0,
+              width: "50%",
+              justifySelf: "end",
+            }}
+          />
+        </h1>
+        <section className="contact-body">
+          <ul className="contact-list">
+            <li
+              className="contact-list-item"
+              onClick={(e) => {
+                e.preventDefault();
+                // window.location that opens mail client
+                window.location.href = `
+              mailto:jaybdev25@gmail.com?subject=Lets Connect!`;
+              }}
+            >
+              <span className="blend-text">Email</span>
+            </li>
+            <li className="contact-list-item" onClick={() => window.open("http://linkedin.com/in/jbantin")}>
+              <span className="blend-text">LinkedIn</span>
+            </li>
+            <li className="contact-list-item" onClick={() => window.open("https://github.com/JordBant")}>
+              <span className="blend-text">Github</span>
+            </li>
+          </ul>
+        </section>
+      </section>
+    </section>
+    /* <form className="contact-form">
         <section className="input-container">
           <LabeledInput
             cssStyles={{ marginRight: "59px" }}
@@ -61,9 +97,7 @@ export const Contact: FC = () => {
                 className={`form-submit-btn ${showSubmitButton ? "show-submit-button" : ""}`}
                 onClick={(e) => {
                   e.preventDefault();
-                  /**
-                   * window.location that opens mail client
-                   */
+                  // window.location that opens mail client
                   window.location.href = `
               mailto:jaybdev25@gmail.com?body=${formValues.message}&subject=${encodeURI(formValues.subject ?? "")}${encodeURI(` | ` + formValues.name ?? "")}${encodeURI(` from ` + formValues.affiliation ?? "")}`;
                 }}
@@ -85,8 +119,8 @@ export const Contact: FC = () => {
             }}
           />
         </div>
-      </form>
-    </SideTitlePage>
+      </form> 
+    /* </SideTitlePage> */
   );
 };
 

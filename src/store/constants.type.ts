@@ -5,6 +5,21 @@ export type SkillIcon = {
     fontColor: string,
 };
 
+// export type TProject = {
+//     name: string;
+//     image: string;
+// };
+
+export type TProject = {
+    id: number;
+    title: string;
+    description: string;
+    image: string;
+    tags: string[];
+    link: string;
+    year?: string;
+  }
+
 export type IconMapping = Record<Icons, React.ReactElement> & IconMapIndexSignature;
 
 export type IconMapIndexSignature = {

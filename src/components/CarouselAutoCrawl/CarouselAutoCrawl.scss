@@ -1,0 +1,40 @@
+@use '/src/app/styles/partials/index' as util;
+
+.ticker-wrapper {
+    @include util.size(100%, 100%, 0, 0);
+    z-index: 100;
+
+    background: black;
+    position: relative;
+    overflow: hidden;
+    // background-color: util.$BKGR-PAGE-BLK;
+
+    .ticker {
+        @include util.size(auto, 100%, 0, 0);
+        @include util.flex(center, center, null, null, null);
+        background: black;
+
+
+        white-space: nowrap;
+
+        animation: util.$TICKER_CRAWL_ANIMATION 40s linear infinite running;
+
+        &__content {
+            @include util.size(auto, 100%, 0, 0);
+            @include util.flex(center, center, null, null, null);
+            background: black;
+
+            & > * {
+                background: black;
+                width: 390px;
+                border-radius: 20px;
+                margin: 0 7px 0;
+            }
+        }
+
+        &:hover {
+            animation-play-state: paused;
+        }
+    }
+
+}

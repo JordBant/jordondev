@@ -10,6 +10,7 @@ import "./SidebarNavCard.scss";
 export const SidebarNavCard: FC<SidebarNavCardProps> = ({
   projectName = "Project Name",
   classNames = "",
+  imageUrl = "",
 }) => {
   const [isHovered, setIsHovered] = useState(false);
   const [isClicked, setIsClicked] = useState(false);
@@ -50,6 +51,11 @@ export const SidebarNavCard: FC<SidebarNavCardProps> = ({
   return (
     <div
       className={`sidebar-card ${classNames}`}
+      style={{
+        backgroundImage: `url(${imageUrl})`,
+        backgroundRepeat: "no-repeat",
+        objectPosition: "50% 50%",
+      }}
       onMouseEnter={() => isHoveredHandler(true)}
       onMouseLeave={() => {
         isHoveredHandler(false);

@@ -1,3 +1,3 @@
-export * from './IconContainer/Icon';
-export * from './SkillCarouselCrawl/SkillCarouselCrawl';
-export * from './SkillCarouselCrawl/partials/SkillCard/SkillCard';
+export * from './Icons/Icon';
+export * from './CarouselAutoCrawl/CarouselAutoCrawl';
+export * from './CarouselAutoCrawl/partials/SkillCard/SkillCard';

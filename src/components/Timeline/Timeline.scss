@@ -1,0 +1,213 @@
+@use '/src/app/styles/partials/index' as util;
+
+.timeline-container {
+  width: 100%;
+  height: auto;
+  position: relative;
+  background-color: rgb(0, 0, 0);
+  font-family: sans-serif;
+  padding-right: 70px;
+  padding-left: 120px;
+
+}
+
+.timeline-header {
+  @include util.flex(center, center, column, null, null);
+  max-width: 80rem;
+  margin: 0 auto;
+  padding-top: 130px;
+
+  .timeline-title {
+    @include util.setFont(clamp(17px, 1.125rem, 25px) util.$FONT-PARAGRAPH, 700, NULL);
+
+    font-size: 1.125rem;
+    margin-bottom: 1rem;
+    color: rgb(255, 255, 255);
+    max-width: 56rem;
+
+    @media (min-width: 768px) {
+      font-size: 2.25rem;
+    }
+  }
+
+  .timeline-description {
+    @include util.setFont(clamp(17px, 1.07vw, 25px) util.$FONT-PARAGRAPH, 400, NULL);
+
+    color: #ffffff;
+    font-size: 1rem;
+    max-width: 24rem;
+    text-align: start;
+  }
+
+  &::after {
+    content: '';
+    @include util.size(100%, 0, 0, 0);
+    inset: 0;
+    position: absolute;
+    box-shadow: 0px 25px 70px 100px rgb(0, 0, 0);
+  }
+}
+
+.timeline-content {
+  position: relative;
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 5rem;
+}
+
+.timeline-entry {
+  display: flex;
+  justify-content: flex-start;
+  padding-top: 1.5rem;
+
+  @media (min-width: 768px) {
+    padding-top: 4rem;
+    gap: 2.5rem;
+  }
+}
+
+.timeline-marker-container {
+  position: sticky;
+  display: flex;
+  flex-direction: column;
+  z-index: 40;
+  align-items: center;
+  top: 10rem;
+  align-self: flex-start;
+  max-width: 20rem;
+
+  @media (min-width: 1024px) {
+    max-width: 24rem;
+  }
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    width: 100%;
+  }
+}
+
+.timeline-marker {
+  height: 2.5rem;
+  position: absolute;
+  left: 0.75rem;
+  width: 2.5rem;
+  border-radius: 9999px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (min-width: 768px) {
+    left: 0.75rem;
+  }
+
+  .dark & {
+    background-color: black;
+  }
+}
+
+.timeline-marker-dot {
+  height: 1rem;
+  width: 1rem;
+  border-radius: 9999px;
+  background-color: #e5e5e5; // neutral-200
+  border: 1px solid #d4d4d4; // neutral-300
+  padding: 0.5rem;
+
+  .dark & {
+    background-color: #262626; // neutral-800
+    border-color: #404040; // neutral-700
+  }
+}
+
+.timeline-entry-title-desktop {
+  @include util.setFont(clamp(30px, 4vw, 2.3rem) util.$FONT-PARAGRAPH, 700, rgb(139, 139, 120));
+
+  display: block;
+  padding-left: 5rem;
+  font-size: clamp(30px, 4vw, 2.3rem);
+  color: #737373; // neutral-500
+
+  .dark & {
+    color: #737373; // neutral-500
+  }
+}
+
+.timeline-entry-content {
+  position: relative;
+  padding-left: 5rem;
+  padding-right: 1rem;
+  width: 100%;
+
+  .timeline-content-text,
+  .timeline-content-text-small {
+    @include util.setFont(clamp(17px, 1vw, 25px) util.$FONT-PARAGRAPH, 400, NULL);
+  }
+
+  .external-project-link {
+    @include util.setFont(clamp(17px, 1vw, 25px) util.$TITLE-FONT, 700, NULL);
+
+    text-decoration: none;
+    color: white;
+
+    &:hover {
+      color: rgba(255, 255, 255, 0.654)
+    }
+  }
+
+  .timeline-checklist-item {
+    @include util.setFont(clamp(17px, 0.7vw, 20px) util.$FONT-PARAGRAPH, 400, NULL);
+    color: #8f8484;
+  }
+
+  @media (min-width: 768px) {
+    padding-left: 1rem;
+  }
+}
+
+.timeline-entry-title-mobile {
+  display: block;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  text-align: left;
+  font-weight: 700;
+  color: #737373; // neutral-500
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+
+  .dark & {
+    color: #737373; // neutral-500
+  }
+}
+
+.timeline-line {
+  position: absolute;
+  left: 2rem;
+  top: 0;
+  overflow: hidden;
+  width: 2px;
+  background-image: linear-gradient(to bottom, transparent 0%, #e5e5e5 50%, transparent 99%);
+  mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%);
+
+  @media (min-width: 768px) {
+    left: 2rem;
+  }
+
+  .dark & {
+    background-image: linear-gradient(to bottom, transparent 0%, #404040 50%, transparent 99%);
+  }
+}
+
+.timeline-progress {
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  width: 2px;
+  background-image: linear-gradient(to top, #a855f7, #3b82f6, transparent);
+  background-position: 0% 0%, 10% 0%, 0% 0%;
+  border-radius: 9999px;
+}
