@@ -13,6 +13,21 @@
 }
 
 @font-face {
+    font-family: 'Space Grotesk', sans-serif;
+    // src: url();
+}
+
+@font-face {
+    font-family: 'Bespoke Stencil', sans-serif;
+    // src: url();
+}
+
+@font-face {
+    font-family: 'Array', sans-serif;
+    // src: url();
+}
+
+@font-face {
     font-family: 'Druk Wide Bold Bold';
     src: local('Druk Wide Bold Bold'), url('/Fonts/druk-wide/DrukWideBold.woff') format('woff');
     font-style: normal;
@@ -23,7 +38,6 @@ $BKGR-PRIM: linear-gradient(90deg, rgba(0, 0, 0, 1) 52%, rgba(255, 255, 255, 1) 
 $BKGR-LANDING: #0c0c0f;
 $BKGR-PAGE: #ece7dd;
 
-$TITLE_DYNAMIC_FONT_SIZE: 9vw;
 $BODY_DYNAMIC_FONT_SIZE: clamp(1.5vw, 1.9vw, 80px);
 $NAV_DYNAMIC_FONT_SIZE: clamp(28px, 1.49vw, 1.8vw);
 $PROJECT_CARD_TITLE_FONT_SIZE: clamp(1.9vw, 4vw, 50px);
@@ -47,6 +61,8 @@ $ICON-INACTIVE: #465e7799;
 $FONT-BLEND-ALT: difference;
 
 $FONT-PRIM: 'Druk Wide Bold Bold';
+$TITLE-FONT: 'Array';
+$FONT-PARAGRAPH: 'Space Grotesk';
 // $FONT-PRIM: 'Glacial Indifference Reg';
 // $FONT-PRIM: 'Glacial Indifference Bold';
 $SIDE_PAGE_TITLE_FONT: 'Glacial Indifference Bold';
@@ -66,7 +82,6 @@ $SIDEBAR-COLOR: #ededed;
 
 $TRANS-1: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 $TRANS-2: 0.3s cubic-bezier(0.39, 0.575, 0.565, 1) all;
-;
 
 // Contact section
 $FORM_INPUT_BKGRD_COLOR: rgba(80, 69, 69, 0.169);

@@ -1,7 +1,7 @@
 import { DetailedHTMLProps, FC, HTMLAttributes } from "react";
 import { IconProps } from "./Icon.types";
 import "./Icon.scss";
-import { ICON_MAP } from "../../store/icons.constants";
+import { ICON_MAP } from "../../store";
 
 export const Icon: FC<
   IconProps & Omit<DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>, "className">

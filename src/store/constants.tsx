@@ -1,3 +1,151 @@
+/* eslint-disable react-refresh/only-export-components */
+import { PageTitle, SkillIcon, TProject } from "./constants.type";
+/**
+ * Page titles being used
+ * ids and the page titles
+ */
+export const PAGE_TITLES: Readonly<PageTitle[]> = ["About", "Projects", "Contact"] as const;
+/**
+ * All Project Info
+ */
+// export const PROJECTS: TProject[] = [
+//   {
+//     name: "MediaM",
+//     image: '/project_images/frpro.jpeg',
+//   },
+//   {
+//     name: "The Blu's Clue",
+//     image: '/project_images/bmi.jpg',
+//   },
+//   {
+//     name: "Pixie URL",
+//     image: '/project_images/frpro.jepg',
+//   },
+//   {
+//     name: "Fitch Connect",
+//     image: '/project_images/fc.jpeg',
+//   },
+//   {
+//     name: "Fitch Ratings Pro",
+//     image: '/project_images/bmi.jpg',
+//   },
+//   {
+//     name: "Business Mutual International",
+//     image: '/project_images/bmi.jpg',
+//   },
+//   {
+//     name: "Neighbors Restock",
+//     image: '/project_images/bmi.jpg',
+//   },
+//   {
+//     name: "Asfaw Consultancy",
+//     image: '/project_images/bmi.jpg',
+//   },
+// ];
+export const PROJECTS: TProject[] = [
+  {
+    id: 1,
+    title: "Business Mutual International (BMI)",
+    description: "A full-stack e-commerce solution with payment processing and inventory management.",
+    image: "/public/images/projects/BMI_img_1.png",
+    tags: ["React", "Node.js", "MongoDB"],
+    link: "https://bmi.fitchsolutions.com",
+    year: "2023",
+  },
+  {
+    id: 2,
+    title: "Fitch Ratings PRO",
+    description: "A responsive portfolio website with dark mode and animations.",
+    image: "/public/images/projects/FRP.jpeg",
+    tags: ["React", "Tailwind CSS", "Framer Motion"],
+    link: "http://pro.fitchratings.com",
+    year: "2023",
+  },
+  {
+    id: 3,
+    title: "RumpuLink",
+    description: "A URL Shortener and Analytics tracker.",
+    image: "https://placehold.co/600x400",
+    tags: ["React", "Firebase", "TypeScript"],
+    link: "blank",
+    year: "2022",
+  },
+  {
+    id: 4,
+    title: "FitchConnect",
+    description: "A collaborative task management application with real-time updates.",
+    image: "/public/images/projects/FC.png",
+    tags: ["React", "Firebase", "TypeScript"],
+    link: "http://app.fitchconnect.com/",
+    year: "2022",
+  },
+  {
+    id: 5,
+    title: "NeighborsRestock",
+    description: "A landing page for a retail-wholesale company.",
+    image: "/public/images/projects/NeighborsRestock.png",
+    tags: ["React", "Firebase", "TypeScript"],
+    link: "https://neighborsrestock.github.io/neighbors-restock/",
+    year: "2022",
+  },
+];
+/**
+ * Icons for sidebar section of each project-display card
+ */
+export const SIDEBAR_ICONS = ["VIDEO", "GITHUB", "SPECTACLES"] as const;
+/**
+ * All Icons used in skill carousel
+ */
+export const SKILL_ICONS: SkillIcon[] = [
+  {
+    name: "REACT",
+    fontColor: "#00d9ff",
+  },
+  {
+    name: "WEBPACK",
+    fontColor: "#00d9ff",
+  },
+  {
+    name: "VUE",
+    fontColor: "#cf6399",
+  },
+  {
+    name: "GRAPHQL",
+    fontColor: "#cf6399",
+  },
+  {
+    name: "SASS",
+    fontColor: "#cf6399",
+  },
+  {
+    name: "CSS",
+    fontColor: "#2062af",
+  },
+  {
+    name: "HTML",
+    fontColor: "#e44b25",
+  },
+  {
+    name: "NODE",
+    fontColor: "#3c873a",
+  },
+  {
+    name: "GIT",
+    fontColor: "#f05233",
+  },
+  {
+    name: "EXPRESS",
+    fontColor: "#3c9cd7",
+  },
+  {
+    name: "GULP",
+    fontColor: "#da4446",
+  },
+  {
+    name: "JAVASCRIPT",
+    fontColor: "#f7dd1d",
+  },
+];
 /**
  * All SVGs will be hosted here.
  * Not all icons are going to be used for the same purpose
@@ -552,39 +700,42 @@ export const TIMELINE_DATA = [
         <p className="timeline-content-text">
           Graduated with a Bachelors of Science in Computer Science from the University at Albany, SUNY
         </p>
+        <p className="timeline-content-text">Go Danes!</p>
         <div className="timeline-image-grid">
           <img
-            src="https://assets.aceternity.com/templates/startup-1.webp"
+            // src="https://assets.aceternity.com/templates/startup-1.webp"
+            src="/public/images/timeline/UAlbany_logo.svg.png"
             alt="startup template"
-            width={500}
+            // width={1500}
             height={500}
             loading="lazy"
+            style={{ border: "none", outline: "none", objectFit: "contain" }}
             className="timeline-image"
           />
-          <img
+          {/* <img
             src="https://assets.aceternity.com/templates/startup-2.webp"
             alt="startup template"
             width={500}
             height={500}
             loading="lazy"
             className="timeline-image"
-          />
-          <img
+          /> */}
+          {/* <img
             src="https://assets.aceternity.com/templates/startup-3.webp"
             alt="startup template"
             width={500}
             height={500}
             loading="lazy"
             className="timeline-image"
-          />
-          <img
+          /> */}
+          {/* <img
             src="https://assets.aceternity.com/templates/startup-4.webp"
             alt="startup template"
             width={500}
             height={500}
             loading="lazy"
             className="timeline-image"
-          />
+          /> */}
         </div>
       </div>
     ),
@@ -594,24 +745,38 @@ export const TIMELINE_DATA = [
     content: (
       <div>
         <p className="timeline-content-text">Joined Fitch Solutions as a Software Engineer</p>
+        <div className="timeline-image-grid">
+          <img
+            src="/public/images/timeline/FitchSolutions_logo.jpg"
+            alt="startup template"
+            width={1500}
+            height={300}
+            loading="lazy"
+            className="timeline-image"
+          />
+        </div>
         <p className="timeline-content-text-small">
-          Started Working on Fitch's legacy application;{" "}
+          Started Working on Fitch's legacy application:
           <span>
-            <a href="">FitchConnect</a>
+            {" "}
+            <a href="http://app.fitchconnect.com" className="external-project-link">FitchConnect</a>
           </span>
         </p>
         {/* <p className="timeline-content-text-small">Published internal business component with Storybook</p> */}
         <div className="timeline-checklist-container">
-          <div className="timeline-checklist-item">✅ Optimized and introduced new features for Vue components</div>
-          <div className="timeline-checklist-item">✅ Iterated on existing Node.js middleware functinonaly</div>
-          <div className="timeline-checklist-item">✅ Random file upload lol</div>
-          <div className="timeline-checklist-item">✅ Himesh Reshammiya Music CD</div>
-          <div className="timeline-checklist-item">✅ Salman Bhai Fan Club registrations open</div>
+          <div className="timeline-checklist-item">
+            ✅ Optimized and introduced new features using Vue components
+          </div>
+          <div className="timeline-checklist-item">✅ Iterated on an existing Node.js middleware</div>
+          <div className="timeline-checklist-item">
+            ✅ Created and expanded capabilities of GraphQL endpoints
+          </div>
         </div>
 
         <div className="timeline-image-grid">
           <img
-            src="https://assets.aceternity.com/pro/hero-sections.png"
+            // src="https://assets.aceternity.com/pro/hero-sections.png"
+            src="/public/images/timeline/FC_img_1.png"
             alt="hero template"
             width={500}
             height={500}
@@ -619,15 +784,17 @@ export const TIMELINE_DATA = [
             className="timeline-image"
           />
           <img
-            src="https://assets.aceternity.com/features-section.png"
+            // src="https://assets.aceternity.com/features-section.png"
+            src="/public/images/timeline/FC_img_2.png"
             alt="feature template"
             width={500}
             height={500}
             loading="lazy"
             className="timeline-image"
           />
-          <img
-            src="https://assets.aceternity.com/pro/bento-grids.png"
+          {/* <img
+            // src="https://assets.aceternity.com/pro/bento-grids.png"
+            src="/public/images/timeline/FC_img_3.png"
             alt="bento template"
             width={500}
             height={500}
@@ -635,26 +802,30 @@ export const TIMELINE_DATA = [
             className="timeline-image"
           />
           <img
-            src="https://assets.aceternity.com/cards.png"
+            // src="https://assets.aceternity.com/cards.png"
+            src="/public/images/timeline/FC_img_1.png"
             alt="cards template"
             width={500}
             height={500}
             loading="lazy"
             className="timeline-image"
-          />
+          /> */}
         </div>
       </div>
     ),
   },
   {
-    title: "2023",
+    title: "January 2023",
     content: (
       <div>
         <p className="timeline-content-text-small">
-          Developed 5+ micro-frontend applications in React Typescript
+          Development of 5-7 applications in React Typescript for several lines-of-business within Fitch
+          Solutions
         </p>
-        <p className="timeline-content-text-small">Published internal business component with Storybook</p>
-        <div className="timeline-checklist-container">
+        <p className="timeline-content-text-small">
+          Published and maintained an internal business component library using Storybook
+        </p>
+        {/* <div className="timeline-checklist-container">
           <div className="timeline-checklist-item">✅ Card grid component</div>
           <div className="timeline-checklist-item">✅ Startup template Aceternity</div>
           <div className="timeline-checklist-item">✅ Random file upload lol</div>
@@ -694,9 +865,218 @@ export const TIMELINE_DATA = [
             loading="lazy"
             className="timeline-image"
           />
+        </div> */}
+      </div>
+    ),
+  },
+  // {
+  //   title: "March 2023",
+  //   content: (
+  //     <div>
+  //       <p className="timeline-content-text-small">
+  //         Published and maintained an internal business component library using Storybook
+  //       </p>
+  //       <div className="timeline-image-grid">
+  //         <img
+  //           src="https://assets.aceternity.com/pro/hero-sections.png"
+  //           alt="hero template"
+  //           width={500}
+  //           height={500}
+  //           loading="lazy"
+  //           className="timeline-image"
+  //         />
+  //         <img
+  //           src="https://assets.aceternity.com/features-section.png"
+  //           alt="feature template"
+  //           width={500}
+  //           height={500}
+  //           loading="lazy"
+  //           className="timeline-image"
+  //         />
+  //         <img
+  //           src="https://assets.aceternity.com/pro/bento-grids.png"
+  //           alt="bento template"
+  //           width={500}
+  //           height={500}
+  //           loading="lazy"
+  //           className="timeline-image"
+  //         />
+  //         <img
+  //           src="https://assets.aceternity.com/cards.png"
+  //           alt="cards template"
+  //           width={500}
+  //           height={500}
+  //           loading="lazy"
+  //           className="timeline-image"
+  //         />
+  //       </div>
+  //     </div>
+  //   ),
+  // },
+  {
+    title: "January 2024",
+    content: (
+      <div>
+        <p className="timeline-content-text-small">
+          Finalized and launched{" "}
+          <span>
+            <a href="http://pro.fitchratings.com" className="external-project-link">Fitch Ratings PRO</a>
+          </span>
+        </p>
+        <div className="timeline-image-grid">
+          <img
+            // src="https://assets.aceternity.com/pro/hero-sections.png"
+            src="/public/images/timeline/FRP_img_1.png"
+            alt="hero template"
+            width={500}
+            height={500}
+            loading="lazy"
+            className="timeline-image"
+          />
+          <img
+            // src="https://assets.aceternity.com/features-section.png"
+            src="/public/images/timeline/FRP_img_2.png"
+            alt="feature template"
+            width={500}
+            height={500}
+            loading="lazy"
+            className="timeline-image"
+          />
+          <img
+            // src="https://assets.aceternity.com/pro/bento-grids.png"
+            src="/public/images/timeline/FRP_img_3.png"
+            alt="bento template"
+            width={500}
+            height={500}
+            loading="lazy"
+            className="timeline-image"
+          />
         </div>
       </div>
     ),
   },
+  {
+    title: "February 2024",
+    content: (
+      <div>
+        <p className="timeline-content-text-small">
+          Became sole Release Coordinator for my team; conducting all production releases for all applications
+          owned by my team
+        </p>
+        <p className="timeline-content-text-small">
+          Released{" "}
+          <span>
+            <a href="http://bmi.fitchsolutions.com" className="external-project-link">Business Mutual International</a>
+          </span>{" "}
+          to production.
+        </p>
+        <div className="timeline-image-grid">
+          <img
+            src="/public/images/timeline/bmi.jpg"
+            alt="hero template"
+            width={500}
+            height={500}
+            loading="lazy"
+            className="timeline-image"
+          />
+        </div>
+      </div>
+    ),
+  },
+  {
+    title: "April 2024",
+    content: (
+      <div>
+        <p className="timeline-content-text-small">
+          Joined Fitch Solution's Core Platform Services (CPS) team to iterate on and maintain APIs written in
+          Java
+        </p>
+        <p className="timeline-content-text-small">
+          Started conducting production releases for the Core Platform team's microservices and APIs
+        </p>
+        {/* <div className="timeline-image-grid">
+          <img
+            src="https://assets.aceternity.com/pro/hero-sections.png"
+            alt="hero template"
+            width={500}
+            height={500}
+            loading="lazy"
+            className="timeline-image"
+          />
+          <img
+            src="https://assets.aceternity.com/features-section.png"
+            alt="feature template"
+            width={500}
+            height={500}
+            loading="lazy"
+            className="timeline-image"
+          />
+          <img
+            src="https://assets.aceternity.com/pro/bento-grids.png"
+            alt="bento template"
+            width={500}
+            height={500}
+            loading="lazy"
+            className="timeline-image"
+          />
+          <img
+            src="https://assets.aceternity.com/cards.png"
+            alt="cards template"
+            width={500}
+            height={500}
+            loading="lazy"
+            className="timeline-image"
+          />
+        </div> */}
+      </div>
+    ),
+  },
+  {
+    title: "September 2024",
+    content: (
+      <div>
+        <p className="timeline-content-text-small">
+          After leaving Fitch Solutions. I started freelance development of applications
+        </p>
+        {/* <div className="timeline-image-grid">
+          <img
+            src="https://assets.aceternity.com/pro/hero-sections.png"
+            alt="hero template"
+            width={500}
+            height={500}
+            loading="lazy"
+            className="timeline-image"
+          />
+          <img
+            src="https://assets.aceternity.com/features-section.png"
+            alt="feature template"
+            width={500}
+            height={500}
+            loading="lazy"
+            className="timeline-image"
+          />
+          <img
+            src="https://assets.aceternity.com/pro/bento-grids.png"
+            alt="bento template"
+            width={500}
+            height={500}
+            loading="lazy"
+            className="timeline-image"
+          />
+          <img
+            src="https://assets.aceternity.com/cards.png"
+            alt="cards template"
+            width={500}
+            height={500}
+            loading="lazy"
+            className="timeline-image"
+          />
+        </div> */}
+      </div>
+    ),
+  },
 ];
+/**
+ * Projects
+ */
 

@@ -1,7 +1,7 @@
 @use '/src/app/styles/partials/index' as util;
 
 .contact-page {
-    @include util.size(100%, 110vh, 0, 0 90px);
+    @include util.size(100%, 110vh, 0, 0 100px 100px);
     @include util.flex(center, center, null, null, null);
     position: relative;
 
@@ -40,7 +40,48 @@
         .contact-list {
             @include util.flex(center, flex-end, column, NULL, NULL);
             height: 60%;
-            border: red 2px solid;
+            list-style-type: none;
+            position: relative;
+            overflow: hidden;
+
+            .contact-list-item {
+                // @include util.setFont(clamp(30px, 9vw, 2.3rem) util.$TITLE-FONT, 700, rgb(139, 139, 120));
+                @include util.setFont(8vw util.$TITLE-FONT, 700, rgb(139, 139, 120));
+
+                width: 100vw;
+                padding: 12.5px 12.5px 12.5px 300px;
+                position: relative;
+                overflow: hidden;
+                text-align: end;
+                z-index: 1;
+                transition: all 0.7s cubic-bezier(0.165, 0.84, 0.44, 1);
+                cursor: pointer;
+
+                .blend-text {
+                    color: white; // necessary for mix-blend-mode: difference to show
+                    mix-blend-mode: difference;
+                    position: relative; // required to stack above ::after
+                    z-index: 1;
+                    perspective: 400px;
+                }
+
+                &::after {
+                    content: '';
+                    @include util.size(100%, 100%, 0, 0);
+                    position: absolute;
+                    inset: 0;
+                    z-index: -1;
+                    background-color: white;
+                    transform: translateX(100%);
+                    transition: all 0.7s cubic-bezier(0.165, 0.84, 0.44, 1);
+                }
+
+                &:hover {
+                    &::after {
+                        transform: translateX(0%);
+                    }
+                }
+            }
         }
     }
 }

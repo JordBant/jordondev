@@ -1,4 +1,4 @@
-import { ICON_MAP } from "./icons.constants";
+import { ICON_MAP } from "./constants";
 
 export type SkillIcon = {
     name: string,

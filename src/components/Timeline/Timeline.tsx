@@ -1,34 +1,34 @@
-import { useScroll, useTransform, motion } from "motion/react"
-import { useEffect, useRef, useState } from "react"
-import { TIMELINE_DATA } from "../../store/icons.constants";
-import "./Timeline.scss"
+import { useScroll, useTransform, motion } from "motion/react";
+import { useEffect, useRef, useState } from "react";
+import "./Timeline.scss";
+import { TIMELINE_DATA } from "../../store";
 
 export const Timeline = () => {
-  const ref = useRef<HTMLDivElement>(null)
-  const containerRef = useRef<HTMLDivElement>(null)
-  const [height, setHeight] = useState(0)
+  const ref = useRef<HTMLDivElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [height, setHeight] = useState(0);
 
   useEffect(() => {
     if (ref.current) {
-      const rect = ref.current.getBoundingClientRect()
-      setHeight(rect.height)
+      const rect = ref.current.getBoundingClientRect();
+      setHeight(rect.height);
     }
-  }, [ref])
+  }, [ref]);
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start 10%", "end 50%"],
-  })
+  });
 
-  const heightTransform = useTransform(scrollYProgress, [0, 1], [0, height])
-  const opacityTransform = useTransform(scrollYProgress, [0, 0.1], [0, 1])
+  const heightTransform = useTransform(scrollYProgress, [0, 1], [0, height]);
+  const opacityTransform = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
 
   return (
     <div className="timeline-container" ref={containerRef}>
       <div className="timeline-header">
-        <h2 className="timeline-title">Changelog from my journey</h2>
+        <h2 className="timeline-title">My Journey Changelog</h2>
         <p className="timeline-description">
-          I&apos;ve been working on Aceternity for the past 2 years. Here&apos;s a timeline of my journey.
+          I&apos;ve been a professional Software Engineer since 2021. Here&apos;s a timeline of my journey thus far.
         </p>
       </div>
 
@@ -64,5 +64,6 @@ export const Timeline = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
+

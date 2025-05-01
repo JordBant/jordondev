@@ -32,14 +32,15 @@
                 // border: 1px solid rgba(255, 255, 255, 0.1);
 
                 .pin-title {
+                    @include util.setFont(27px util.$TITLE-FONT, null, 400);
+
                     display: inline-block;
                     position: relative;
                     z-index: 20;
                     padding-top: 0.125rem;
                     padding-bottom: 0.125rem;
-                    font-size: 30px;
                     line-height: 1rem;
-                    font-weight: 700;
+                    font-weight: 400;
                     color: #ffffff;
                 }
 

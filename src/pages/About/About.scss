@@ -1,14 +1,14 @@
 @use '/src/app/styles/partials/index' as util;
 
 .about-body-container {
-    @include util.size(100%, 120vh, 0, 0 90px);
+    @include util.size(100%, 120vh, 0, 0);
     position: relative;
     background: util.$BKGR-PAGE-BLK;
     background-size: util.$BKGR-SIZE;
     overflow: hidden;
 
     .about_body {
-        @include util.size(auto, 80%, 0 0 0 3vw, 0);
+        @include util.size(auto, 80%, 0 70px 0 0, 0);
         @include util.flex(center, flex-end, column, NULL, NULL);
 
         & > * {
@@ -16,7 +16,7 @@
         }
 
         .about_salutations {
-            @include util.setFont(util.$TITLE_DYNAMIC_FONT_SIZE util.$FONT-PRIM, 400, util.$TEXT-PRIM);
+            @include util.setFont(clamp(175px, 12.9vw, 230px) util.$TITLE-FONT, null, util.$TEXT-PRIM);
             @include util.flex(center, flex-end, column, NULL, NULL);
             line-height: 0.9;
 
@@ -24,7 +24,7 @@
                 @include util.orangeFontGradient();
                 // animation: GlidingColorFontGradient 8.4s linear infinite;
                 background-size: 200% auto;
-                font-weight: 900;
+                font-weight: 700;
                 z-index: 1;
             }
         }
@@ -45,6 +45,7 @@
             .contact-now {
                 @include util.setFont(2vw util.$FONT-PRIM, 400, NULL);
                 @include util.size(auto, 4vw, 0, 0 0.7vw);
+                cursor: pointer;
 
                 transition: util.$TRANS-2;
                 border: 2px solid black;

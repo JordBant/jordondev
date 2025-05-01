@@ -8,16 +8,18 @@
   font-family: sans-serif;
   padding-right: 70px;
   padding-left: 120px;
+
 }
 
 .timeline-header {
-  @include util.flex(end, end, null, null, null);
-  border: 2px solid red;
+  @include util.flex(center, center, column, null, null);
   max-width: 80rem;
   margin: 0 auto;
   padding-top: 130px;
 
   .timeline-title {
+    @include util.setFont(clamp(17px, 1.125rem, 25px) util.$FONT-PARAGRAPH, 700, NULL);
+
     font-size: 1.125rem;
     margin-bottom: 1rem;
     color: rgb(255, 255, 255);
@@ -29,12 +31,12 @@
   }
 
   .timeline-description {
-    color: #ffffff;
-    font-size: 0.875rem;
-    max-width: 24rem;
-    text-align: end;
+    @include util.setFont(clamp(17px, 1.07vw, 25px) util.$FONT-PARAGRAPH, 400, NULL);
 
-    border: 2px solid red;
+    color: #ffffff;
+    font-size: 1rem;
+    max-width: 24rem;
+    text-align: start;
   }
 
   &::after {
@@ -120,10 +122,11 @@
 }
 
 .timeline-entry-title-desktop {
+  @include util.setFont(clamp(30px, 4vw, 2.3rem) util.$FONT-PARAGRAPH, 700, rgb(139, 139, 120));
+
   display: block;
   padding-left: 5rem;
   font-size: clamp(30px, 4vw, 2.3rem);
-  font-weight: 700;
   color: #737373; // neutral-500
 
   .dark & {
@@ -136,6 +139,27 @@
   padding-left: 5rem;
   padding-right: 1rem;
   width: 100%;
+
+  .timeline-content-text,
+  .timeline-content-text-small {
+    @include util.setFont(clamp(17px, 1vw, 25px) util.$FONT-PARAGRAPH, 400, NULL);
+  }
+
+  .external-project-link {
+    @include util.setFont(clamp(17px, 1vw, 25px) util.$TITLE-FONT, 700, NULL);
+
+    text-decoration: none;
+    color: white;
+
+    &:hover {
+      color: rgba(255, 255, 255, 0.654)
+    }
+  }
+
+  .timeline-checklist-item {
+    @include util.setFont(clamp(17px, 0.7vw, 20px) util.$FONT-PARAGRAPH, 400, NULL);
+    color: #8f8484;
+  }
 
   @media (min-width: 768px) {
     padding-left: 1rem;
