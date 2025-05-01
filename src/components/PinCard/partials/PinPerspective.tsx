@@ -1,7 +1,7 @@
 import { motion } from "motion/react";
 import "./PinPerspective.scss";
 
-export const PinPerspective = ({ title, color }: { title?: string; color: string }) => {
+export const PinPerspective = ({ title }: { title?: string; color: string }) => {
   return (
     <motion.div className="pin-wrapper make-visible group-hover/pin:opacity-100">
       <div className="pin-container">

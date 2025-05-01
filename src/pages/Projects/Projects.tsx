@@ -31,7 +31,7 @@ export const Projects = () => {
           {/* {PROJECTS.map(({ name, image }, idx) => {
             return <SidebarNavCard key={`${name}--${idx}`} imageUrl={image} projectName={name} />;
           })} */}
-          {PROJECTS.map((project, idx) => {
+          {PROJECTS.map((project) => {
             return <ProjectCard key={project.id} project={project} />;
           })}
         </>

@@ -1,4 +1,4 @@
-import { FC, forwardRef, LegacyRef } from "react";
+import { forwardRef, LegacyRef } from "react";
 import { Icons, SKILL_ICONS } from "../../store";
 import { Icon } from "../Icons/Icon";
 import { PinCard } from "../PinCard/PinCard";
