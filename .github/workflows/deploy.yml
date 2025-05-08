@@ -11,6 +11,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+
+      - name: Confirm Build Step Reached
+        run: |
+          echo "==============================="
+          echo "🚀 Starting build process step"
+          echo "==============================="
+
       - name: Checkout repo
         uses: actions/checkout@v3.5.3
 
@@ -19,8 +26,7 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Print custom message
-        run: echo "🚀 Starting build process"
+
 
       - name: Install dependencies
         run: yarn install --frozen-lockfile
