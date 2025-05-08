@@ -19,7 +19,6 @@ jobs:
 
       - name: Install dependencies
         uses: yarn install --frozen-lockfile
-        # uses: bahmutov/npm-install@v1
 
       - name: Build project
         run: yarn run build
