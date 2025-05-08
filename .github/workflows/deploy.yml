@@ -19,11 +19,14 @@ jobs:
         with:
           node-version: '20'
 
+      - name: Print custom message
+        run: echo "🚀 Starting build process"
+
       - name: Install dependencies
         run: yarn install --frozen-lockfile
 
       - name: Build project
-        run: yarn build
+        run: yarn run build
 
       - name: Verify dist folder
         run: |
