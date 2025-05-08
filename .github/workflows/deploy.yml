@@ -1,121 +1,18 @@
-name: Deploy
+name: Minimal Test
 
-on:
-  push:
-    branches:
-      - main
+on: [push]
 
 jobs:
-  build:
-    name: Build
+  test-upload:
     runs-on: ubuntu-latest
-
     steps:
-
-      - name: Confirm Build Step Reached
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Create dummy artifact
         run: |
-          echo "==============================="
-          echo "🚀 Starting build process step"
-          echo "==============================="
-
-      - name: Checkout repo
-        uses: actions/checkout@v3.5.3
-
-      - name: Setup Node
-        uses: actions/setup-node@v3.8.2
+          mkdir -p dist && echo "Hello world" > dist/index.html
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
         with:
-          node-version: '20'
-
-      - name: Install dependencies
-        run: yarn install --frozen-lockfile
-
-      - name: Build project
-        run: yarn run build
-
-      - name: Verify dist folder
-        run: |
-          echo "Checking if ./dist exists and has content..."
-          ls -la ./dist
-          if [ ! -d "./dist" ] || [ -z "$(ls -A ./dist)" ]; then
-            echo "Error: dist folder is missing or empty"
-            exit 1
-          fi
-
-      - name: Upload production-ready build files
-        uses: actions/upload-artifact@v3.1.3
-        with:
-          name: production-files
+          name: test-artifact
           path: ./dist
-
-  deploy:
-    name: Deploy
-    needs: build
-    runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main'
-
-    steps:
-      - name: Download artifact
-        uses: actions/download-artifact@v3.1.3
-        with:
-          name: production-files
-          path: ./dist
-
-      - name: Check downloaded files
-        run: ls -la ./dist
-
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3.9.3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
-
-# name: Deploy
-
-# on:
-#   push:
-#     branches:
-#       - main
-
-# jobs:
-#   build:
-#     name: Build
-#     runs-on: ubuntu-latest
-
-#     steps:
-#       - name: Checkout repo
-#         uses: actions/checkout@v3
-
-#       - name: Setup Node
-#         uses: actions/setup-node@v3
-
-#       - name: Install dependencies
-#         run: yarn install --frozen-lockfile
-#         # uses: bahmutov/npm-install@v1
-
-#       - name: Build project
-#         run: yarn run build
-
-#       - name: Upload production-ready build files
-#         uses: actions/upload-artifact@v3
-#         with:
-#           name: production-files
-#           path: ./dist
-
-#   deploy:
-#     name: Deploy
-#     needs: build
-#     runs-on: ubuntu-latest
-#     if: github.ref == 'refs/heads/main'
-
-#     steps:
-#       - name: Download artifact
-#         uses: actions/download-artifact@v3
-#         with:
-#           name: production-files
-#           path: ./dist
-
-#       - name: Deploy to GitHub Pages
-#         uses: peaceiris/actions-gh-pages@v3
-#         with:
-#           github_token: ${{ secrets.GITHUB_TOKEN }}
-#           publish_dir: ./dist
