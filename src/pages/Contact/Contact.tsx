@@ -1,28 +1,28 @@
-import { FC, useState } from "react";
+import { FC } from "react";
 import "./Contact.scss";
 // import { LabeledInputProps } from "../../components/LabeledInput/LabeledInput.types";
 
-type FormBody = {
-  name: string;
-  affiliation: string;
-  subject: string;
-  message: string;
-};
+// type FormBody = {
+//   name: string;
+//   affiliation: string;
+//   subject: string;
+//   message: string;
+// };
 
 export const Contact: FC = () => {
-  const DEFAULT_FORM_VALUES: FormBody = {
-    name: "",
-    subject: "",
-    message: "",
-    affiliation: "",
-  };
+  // const DEFAULT_FORM_VALUES: FormBody = {
+  //   name: "",
+  //   subject: "",
+  //   message: "",
+  //   affiliation: "",
+  // };
 
-  const [formValues, setFormValues] = useState<FormBody>(DEFAULT_FORM_VALUES);
-  const [showSubmitButton, setShowSubmitButton] = useState<boolean>(false);
+  // const [formValues, setFormValues] = useState<FormBody>(DEFAULT_FORM_VALUES);
+  // const [showSubmitButton, setShowSubmitButton] = useState<boolean>(false);
 
-  const changeFormValues = (input: Partial<FormBody>, defaultFormValues: FormBody = formValues) => {
-    setFormValues({ ...defaultFormValues, ...input });
-  };
+  // const changeFormValues = (input: Partial<FormBody>, defaultFormValues: FormBody = formValues) => {
+  //   setFormValues({ ...defaultFormValues, ...input });
+  // };
 
   return (
     // <SideTitlePage
