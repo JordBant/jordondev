@@ -22,7 +22,6 @@
 
             & > span {
                 @include util.orangeFontGradient();
-                // animation: GlidingColorFontGradient 8.4s linear infinite;
                 background-size: 200% auto;
                 font-weight: 700;
                 z-index: 1;
@@ -31,7 +30,6 @@
 
         .about_body_text {
             @include util.setFont(util.$BODY_DYNAMIC_FONT_SIZE util.$FONT-PRIM, 400, util.$TEXT-PRIM);
-            // mix-blend-mode: util.$FONT-BLEND-ALT;
         }
 
         .calls-to-action {
@@ -79,10 +77,8 @@
         bottom: -50%;
         background: rgb(0, 0, 0);
         position: absolute;
-        // border-radius: 100%;
         left: 50%;
         transform: translateX(-50%);
-        // box-shadow: 0px -52px 1000px 80px rgb(0, 0, 0);
         box-shadow: 0px -52px 200px 100px rgb(0, 0, 0);
     }
 }

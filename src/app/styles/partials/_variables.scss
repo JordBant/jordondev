@@ -1,18 +1,4 @@
 @font-face {
-    font-family: 'Glacial Indifference Reg';
-    src: url('/Fonts/glacial-indifference/GlacialIndifference-Regular.otf');
-    font-style: normal;
-    font-weight: normal;
-}
-
-@font-face {
-    font-family: 'Glacial Indifference Bold';
-    src: url('/Fonts/glacial-indifference/GlacialIndifference-Bold.otf');
-    font-style: normal;
-    font-weight: normal;
-}
-
-@font-face {
     font-family: 'Space Grotesk', sans-serif;
     // src: url();
 }
@@ -63,9 +49,7 @@ $FONT-BLEND-ALT: difference;
 $FONT-PRIM: 'Druk Wide Bold Bold';
 $TITLE-FONT: 'Array';
 $FONT-PARAGRAPH: 'Space Grotesk';
-// $FONT-PRIM: 'Glacial Indifference Reg';
-// $FONT-PRIM: 'Glacial Indifference Bold';
-$SIDE_PAGE_TITLE_FONT: 'Glacial Indifference Bold';
+
 $INV_FONT_COLOR: rgb(22, 21, 21);
 $BKGR-PAGE-BLK: rgba(12, 12, 12, 1);
 

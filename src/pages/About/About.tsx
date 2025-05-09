@@ -1,14 +1,11 @@
-import { forwardRef, LegacyRef } from "react";
 import { BackgroundBoxes } from "../../components/BackgroundBoxes/BackgroundBoxes";
 import "./About.scss";
 
-export const About = forwardRef(({ id }: { id: string }, ref) => {
+export const About = () => {
   return (
-    <section className="about-body-container" id={id} ref={ref as LegacyRef<HTMLElement> | undefined}>
-      {/* <Navbar {...props} /> */}
+    <section className="about-body-container">
       <section className="about_body">
         <BackgroundBoxes />
-        {/* <MyParticles /> */}
         <h1 className="about_salutations">
           <span>I'm</span>
           <span>Jordon</span>
@@ -17,9 +14,6 @@ export const About = forwardRef(({ id }: { id: string }, ref) => {
         <div className="calls-to-action">
           <button
             className="contact-now"
-            // onClick={() => {
-            //   document.getElementById(`#contact`)?.scrollIntoView({ behavior: "smooth", block: "end" });
-            // }}
             onClick={() => {
               window.scrollTo(0, document.body.scrollHeight);
             }}
@@ -30,5 +24,5 @@ export const About = forwardRef(({ id }: { id: string }, ref) => {
       </section>
     </section>
   );
-});
+};
 

@@ -47,6 +47,9 @@ const CalendarIcon: React.FC = () => (
 const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   const [, setIsHovered] = useState<boolean>(false);
 
+  // const isProd = 
+  console.log(window.location.href)
+
   return (
     <Card
       className="project-card"
