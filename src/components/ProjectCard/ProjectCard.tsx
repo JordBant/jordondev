@@ -48,7 +48,10 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   const [, setIsHovered] = useState<boolean>(false);
 
   // const isProd =
-  console.log(window.location.hostname);
+  console.log({'1':window.location.hostname});
+  console.log({'2':window.location.host});
+  console.log({'3':window.location.href});
+  console.log({'4':window.location.pathname});
 
   return (
     <Card
