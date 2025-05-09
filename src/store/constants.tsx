@@ -47,7 +47,7 @@ export const PROJECTS: TProject[] = [
     id: 1,
     title: "Business Mutual International (BMI)",
     description: "A full-stack e-commerce solution with payment processing and inventory management.",
-    image: "/public/images/projects/BMI_img_1.png",
+    image: "/images/projects/BMI_img_1.png",
     tags: ["React", "Node.js", "MongoDB"],
     link: "https://bmi.fitchsolutions.com",
     year: "2023",
@@ -56,7 +56,7 @@ export const PROJECTS: TProject[] = [
     id: 2,
     title: "Fitch Ratings PRO",
     description: "A responsive portfolio website with dark mode and animations.",
-    image: "/public/images/projects/FRP.jpeg",
+    image: "/images/projects/FRP.jpeg",
     tags: ["React", "Tailwind CSS", "Framer Motion"],
     link: "http://pro.fitchratings.com",
     year: "2023",
@@ -74,7 +74,7 @@ export const PROJECTS: TProject[] = [
     id: 4,
     title: "FitchConnect",
     description: "A collaborative task management application with real-time updates.",
-    image: "/public/images/projects/FC.png",
+    image: "/images/projects/FC.png",
     tags: ["React", "Firebase", "TypeScript"],
     link: "http://app.fitchconnect.com/",
     year: "2022",
@@ -83,7 +83,7 @@ export const PROJECTS: TProject[] = [
     id: 5,
     title: "NeighborsRestock",
     description: "A landing page for a retail-wholesale company.",
-    image: "/public/images/projects/NeighborsRestock.png",
+    image: "/images/projects/NeighborsRestock.png",
     tags: ["React", "Firebase", "TypeScript"],
     link: "https://neighborsrestock.github.io/neighbors-restock/",
     year: "2022",
@@ -704,7 +704,7 @@ export const TIMELINE_DATA = [
         <div className="timeline-image-grid">
           <img
             // src="https://assets.aceternity.com/templates/startup-1.webp"
-            src="/public/images/timeline/UAlbany_logo.svg.png"
+            src="/images/timeline/UAlbany_logo.svg.png"
             alt="startup template"
             // width={1500}
             height={500}
@@ -747,7 +747,7 @@ export const TIMELINE_DATA = [
         <p className="timeline-content-text">Joined Fitch Solutions as a Software Engineer</p>
         <div className="timeline-image-grid">
           <img
-            src="/public/images/timeline/FitchSolutions_logo.jpg"
+            src="/images/timeline/FitchSolutions_logo.jpg"
             alt="startup template"
             width={1500}
             height={300}
@@ -759,7 +759,9 @@ export const TIMELINE_DATA = [
           Started Working on Fitch's legacy application:
           <span>
             {" "}
-            <a href="http://app.fitchconnect.com" className="external-project-link">FitchConnect</a>
+            <a href="http://app.fitchconnect.com" className="external-project-link">
+              FitchConnect
+            </a>
           </span>
         </p>
         {/* <p className="timeline-content-text-small">Published internal business component with Storybook</p> */}
@@ -776,7 +778,7 @@ export const TIMELINE_DATA = [
         <div className="timeline-image-grid">
           <img
             // src="https://assets.aceternity.com/pro/hero-sections.png"
-            src="/public/images/timeline/FC_img_1.png"
+            src="/images/timeline/FC_img_1.png"
             alt="hero template"
             width={500}
             height={500}
@@ -785,7 +787,7 @@ export const TIMELINE_DATA = [
           />
           <img
             // src="https://assets.aceternity.com/features-section.png"
-            src="/public/images/timeline/FC_img_2.png"
+            src="/images/timeline/FC_img_2.png"
             alt="feature template"
             width={500}
             height={500}
@@ -794,7 +796,7 @@ export const TIMELINE_DATA = [
           />
           {/* <img
             // src="https://assets.aceternity.com/pro/bento-grids.png"
-            src="/public/images/timeline/FC_img_3.png"
+            src="/images/timeline/FC_img_3.png"
             alt="bento template"
             width={500}
             height={500}
@@ -803,7 +805,7 @@ export const TIMELINE_DATA = [
           />
           <img
             // src="https://assets.aceternity.com/cards.png"
-            src="/public/images/timeline/FC_img_1.png"
+            src="/images/timeline/FC_img_1.png"
             alt="cards template"
             width={500}
             height={500}
@@ -920,13 +922,15 @@ export const TIMELINE_DATA = [
         <p className="timeline-content-text-small">
           Finalized and launched{" "}
           <span>
-            <a href="http://pro.fitchratings.com" className="external-project-link">Fitch Ratings PRO</a>
+            <a href="http://pro.fitchratings.com" className="external-project-link">
+              Fitch Ratings PRO
+            </a>
           </span>
         </p>
         <div className="timeline-image-grid">
           <img
             // src="https://assets.aceternity.com/pro/hero-sections.png"
-            src="/public/images/timeline/FRP_img_1.png"
+            src="/images/timeline/FRP_img_1.png"
             alt="hero template"
             width={500}
             height={500}
@@ -935,7 +939,7 @@ export const TIMELINE_DATA = [
           />
           <img
             // src="https://assets.aceternity.com/features-section.png"
-            src="/public/images/timeline/FRP_img_2.png"
+            src="/images/timeline/FRP_img_2.png"
             alt="feature template"
             width={500}
             height={500}
@@ -944,7 +948,7 @@ export const TIMELINE_DATA = [
           />
           <img
             // src="https://assets.aceternity.com/pro/bento-grids.png"
-            src="/public/images/timeline/FRP_img_3.png"
+            src="/images/timeline/FRP_img_3.png"
             alt="bento template"
             width={500}
             height={500}
@@ -966,13 +970,15 @@ export const TIMELINE_DATA = [
         <p className="timeline-content-text-small">
           Released{" "}
           <span>
-            <a href="http://bmi.fitchsolutions.com" className="external-project-link">Business Mutual International</a>
+            <a href="http://bmi.fitchsolutions.com" className="external-project-link">
+              Business Mutual International
+            </a>
           </span>{" "}
           to production.
         </p>
         <div className="timeline-image-grid">
           <img
-            src="/public/images/timeline/bmi.jpg"
+            src="/images/timeline/bmi.jpg"
             alt="hero template"
             width={500}
             height={500}
