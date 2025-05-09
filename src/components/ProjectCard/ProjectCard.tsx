@@ -46,12 +46,7 @@ const CalendarIcon: React.FC = () => (
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   const [, setIsHovered] = useState<boolean>(false);
-
-  // const isProd =
-  console.log({'1':window.location.hostname});
-  console.log({'2':window.location.host});
-  console.log({'3':window.location.href});
-  console.log({'4':window.location.pathname});
+  const PROD_IMG_URL = window.location.hostname === 'jordbant.github.io' ? `/public${project.image}` : project.image
 
   return (
     <Card
@@ -62,7 +57,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
       <div className="overlay" />
 
       <div className="image-container">
-        <img src={project.image || "/placeholder.svg"} alt={project.title} className="project-image" />
+        <img src={PROD_IMG_URL || "/placeholder.svg"} alt={project.title} className="project-image" />
       </div>
 
       <div className="card-content">
