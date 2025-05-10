@@ -46,7 +46,7 @@ const CalendarIcon: React.FC = () => (
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   const [, setIsHovered] = useState<boolean>(false);
-  const PROD_IMG_URL = window.location.hostname === 'jordbant.github.io' ? `jordondev/public${project.image}` : project.image
+  const PROD_IMG_URL = window.location.hostname === 'jordbant.github.io' ? `/public${project.image}` : project.image
 
   return (
     <Card
