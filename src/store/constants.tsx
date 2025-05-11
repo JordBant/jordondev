@@ -778,7 +778,7 @@ export const TIMELINE_DATA = [
         <div className="timeline-image-grid">
           <img
             // src="https://assets.aceternity.com/pro/hero-sections.png"
-            src="/images/timeline/FC_img_1.png"
+            src="/jordondev/public/images/timeline/FC_img_1.png"
             alt="hero template"
             width={500}
             height={500}
@@ -787,31 +787,13 @@ export const TIMELINE_DATA = [
           />
           <img
             // src="https://assets.aceternity.com/features-section.png"
-            src="/images/timeline/FC_img_2.png"
+            src="/jordondev/public/images/timeline/FC_img_2.png"
             alt="feature template"
             width={500}
             height={500}
             loading="lazy"
             className="timeline-image"
           />
-          {/* <img
-            // src="https://assets.aceternity.com/pro/bento-grids.png"
-            src="/images/timeline/FC_img_3.png"
-            alt="bento template"
-            width={500}
-            height={500}
-            loading="lazy"
-            className="timeline-image"
-          />
-          <img
-            // src="https://assets.aceternity.com/cards.png"
-            src="/images/timeline/FC_img_1.png"
-            alt="cards template"
-            width={500}
-            height={500}
-            loading="lazy"
-            className="timeline-image"
-          /> */}
         </div>
       </div>
     ),
@@ -827,94 +809,9 @@ export const TIMELINE_DATA = [
         <p className="timeline-content-text-small">
           Published and maintained an internal business component library using Storybook
         </p>
-        {/* <div className="timeline-checklist-container">
-          <div className="timeline-checklist-item">✅ Card grid component</div>
-          <div className="timeline-checklist-item">✅ Startup template Aceternity</div>
-          <div className="timeline-checklist-item">✅ Random file upload lol</div>
-          <div className="timeline-checklist-item">✅ Himesh Reshammiya Music CD</div>
-          <div className="timeline-checklist-item">✅ Salman Bhai Fan Club registrations open</div>
-        </div>
-        <div className="timeline-image-grid">
-          <img
-            src="https://assets.aceternity.com/pro/hero-sections.png"
-            alt="hero template"
-            width={500}
-            height={500}
-            loading="lazy"
-            className="timeline-image"
-          />
-          <img
-            src="https://assets.aceternity.com/features-section.png"
-            alt="feature template"
-            width={500}
-            height={500}
-            loading="lazy"
-            className="timeline-image"
-          />
-          <img
-            src="https://assets.aceternity.com/pro/bento-grids.png"
-            alt="bento template"
-            width={500}
-            height={500}
-            loading="lazy"
-            className="timeline-image"
-          />
-          <img
-            src="https://assets.aceternity.com/cards.png"
-            alt="cards template"
-            width={500}
-            height={500}
-            loading="lazy"
-            className="timeline-image"
-          />
-        </div> */}
       </div>
     ),
   },
-  // {
-  //   title: "March 2023",
-  //   content: (
-  //     <div>
-  //       <p className="timeline-content-text-small">
-  //         Published and maintained an internal business component library using Storybook
-  //       </p>
-  //       <div className="timeline-image-grid">
-  //         <img
-  //           src="https://assets.aceternity.com/pro/hero-sections.png"
-  //           alt="hero template"
-  //           width={500}
-  //           height={500}
-  //           loading="lazy"
-  //           className="timeline-image"
-  //         />
-  //         <img
-  //           src="https://assets.aceternity.com/features-section.png"
-  //           alt="feature template"
-  //           width={500}
-  //           height={500}
-  //           loading="lazy"
-  //           className="timeline-image"
-  //         />
-  //         <img
-  //           src="https://assets.aceternity.com/pro/bento-grids.png"
-  //           alt="bento template"
-  //           width={500}
-  //           height={500}
-  //           loading="lazy"
-  //           className="timeline-image"
-  //         />
-  //         <img
-  //           src="https://assets.aceternity.com/cards.png"
-  //           alt="cards template"
-  //           width={500}
-  //           height={500}
-  //           loading="lazy"
-  //           className="timeline-image"
-  //         />
-  //       </div>
-  //     </div>
-  //   ),
-  // },
   {
     title: "January 2024",
     content: (
@@ -930,7 +827,7 @@ export const TIMELINE_DATA = [
         <div className="timeline-image-grid">
           <img
             // src="https://assets.aceternity.com/pro/hero-sections.png"
-            src="/images/timeline/FRP_img_1.png"
+            src="/jordondev/public/images/timeline/FRP_img_1.png"
             alt="hero template"
             width={500}
             height={500}
@@ -939,7 +836,7 @@ export const TIMELINE_DATA = [
           />
           <img
             // src="https://assets.aceternity.com/features-section.png"
-            src="/images/timeline/FRP_img_2.png"
+            src="/jordondev/public/images/timeline/FRP_img_2.png"
             alt="feature template"
             width={500}
             height={500}
@@ -948,7 +845,7 @@ export const TIMELINE_DATA = [
           />
           <img
             // src="https://assets.aceternity.com/pro/bento-grids.png"
-            src="/images/timeline/FRP_img_3.png"
+            src="/jordondev/public/images/timeline/FRP_img_3.png"
             alt="bento template"
             width={500}
             height={500}
@@ -978,7 +875,7 @@ export const TIMELINE_DATA = [
         </p>
         <div className="timeline-image-grid">
           <img
-            src="/images/timeline/bmi.jpg"
+            src="/jordondev/public/images/timeline/bmi.jpg"
             alt="hero template"
             width={500}
             height={500}
@@ -1000,40 +897,6 @@ export const TIMELINE_DATA = [
         <p className="timeline-content-text-small">
           Started conducting production releases for the Core Platform team's microservices and APIs
         </p>
-        {/* <div className="timeline-image-grid">
-          <img
-            src="https://assets.aceternity.com/pro/hero-sections.png"
-            alt="hero template"
-            width={500}
-            height={500}
-            loading="lazy"
-            className="timeline-image"
-          />
-          <img
-            src="https://assets.aceternity.com/features-section.png"
-            alt="feature template"
-            width={500}
-            height={500}
-            loading="lazy"
-            className="timeline-image"
-          />
-          <img
-            src="https://assets.aceternity.com/pro/bento-grids.png"
-            alt="bento template"
-            width={500}
-            height={500}
-            loading="lazy"
-            className="timeline-image"
-          />
-          <img
-            src="https://assets.aceternity.com/cards.png"
-            alt="cards template"
-            width={500}
-            height={500}
-            loading="lazy"
-            className="timeline-image"
-          />
-        </div> */}
       </div>
     ),
   },
@@ -1044,45 +907,7 @@ export const TIMELINE_DATA = [
         <p className="timeline-content-text-small">
           After leaving Fitch Solutions. I started freelance development of applications
         </p>
-        {/* <div className="timeline-image-grid">
-          <img
-            src="https://assets.aceternity.com/pro/hero-sections.png"
-            alt="hero template"
-            width={500}
-            height={500}
-            loading="lazy"
-            className="timeline-image"
-          />
-          <img
-            src="https://assets.aceternity.com/features-section.png"
-            alt="feature template"
-            width={500}
-            height={500}
-            loading="lazy"
-            className="timeline-image"
-          />
-          <img
-            src="https://assets.aceternity.com/pro/bento-grids.png"
-            alt="bento template"
-            width={500}
-            height={500}
-            loading="lazy"
-            className="timeline-image"
-          />
-          <img
-            src="https://assets.aceternity.com/cards.png"
-            alt="cards template"
-            width={500}
-            height={500}
-            loading="lazy"
-            className="timeline-image"
-          />
-        </div> */}
       </div>
     ),
   },
 ];
-/**
- * Projects
- */
-
