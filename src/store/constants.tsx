@@ -1,5 +1,5 @@
 /* eslint-disable react-refresh/only-export-components */
-import { PageTitle, SkillIcon, TProject } from "constants.type";
+import { PageTitle, SkillIcon, TProject } from "./constants.type";
 /**
  * Page titles being used
  * ids and the page titles
