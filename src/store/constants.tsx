@@ -1,5 +1,5 @@
 /* eslint-disable react-refresh/only-export-components */
-import { PageTitle, SkillIcon, TProject } from "./constants.type";
+import { PageTitle, SkillIcon, TProject } from "constants.type";
 /**
  * Page titles being used
  * ids and the page titles
@@ -47,7 +47,7 @@ export const PROJECTS: TProject[] = [
     id: 1,
     title: "Business Mutual International (BMI)",
     description: "A full-stack e-commerce solution with payment processing and inventory management.",
-    image: "/images/projects/BMI_img_1.png",
+    image: "images/projects/BMI_img_1.png",
     tags: ["React", "Node.js", "MongoDB"],
     link: "https://bmi.fitchsolutions.com",
     year: "2023",
@@ -56,7 +56,7 @@ export const PROJECTS: TProject[] = [
     id: 2,
     title: "Fitch Ratings PRO",
     description: "A responsive portfolio website with dark mode and animations.",
-    image: "/images/projects/FRP.jpeg",
+    image: "images/projects/FRP.jpeg",
     tags: ["React", "Tailwind CSS", "Framer Motion"],
     link: "http://pro.fitchratings.com",
     year: "2023",
@@ -74,7 +74,7 @@ export const PROJECTS: TProject[] = [
     id: 4,
     title: "FitchConnect",
     description: "A collaborative task management application with real-time updates.",
-    image: "/images/projects/FC.png",
+    image: "images/projects/FC.png",
     tags: ["React", "Firebase", "TypeScript"],
     link: "http://app.fitchconnect.com/",
     year: "2022",
@@ -83,7 +83,7 @@ export const PROJECTS: TProject[] = [
     id: 5,
     title: "NeighborsRestock",
     description: "A landing page for a retail-wholesale company.",
-    image: "/images/projects/NeighborsRestock.png",
+    image: "images/projects/NeighborsRestock.png",
     tags: ["React", "Firebase", "TypeScript"],
     link: "https://neighborsrestock.github.io/neighbors-restock/",
     year: "2022",
@@ -704,7 +704,7 @@ export const TIMELINE_DATA = [
         <div className="timeline-image-grid">
           <img
             // src="https://assets.aceternity.com/templates/startup-1.webp"
-            src="/images/timeline/UAlbany_logo.svg.png"
+            src="images/timeline/UAlbany_logo.svg.png"
             alt="startup template"
             // width={1500}
             height={500}
@@ -747,7 +747,7 @@ export const TIMELINE_DATA = [
         <p className="timeline-content-text">Joined Fitch Solutions as a Software Engineer</p>
         <div className="timeline-image-grid">
           <img
-            src="/images/timeline/FitchSolutions_logo.jpg"
+            src="images/timeline/FitchSolutions_logo.jpg"
             alt="startup template"
             width={1500}
             height={300}
@@ -778,7 +778,7 @@ export const TIMELINE_DATA = [
         <div className="timeline-image-grid">
           <img
             // src="https://assets.aceternity.com/pro/hero-sections.png"
-            src="/jordondev/public/images/timeline/FC_img_1.png"
+            src="images/timeline/FC_img_1.png"
             alt="hero template"
             width={500}
             height={500}
@@ -787,7 +787,7 @@ export const TIMELINE_DATA = [
           />
           <img
             // src="https://assets.aceternity.com/features-section.png"
-            src="/jordondev/public/images/timeline/FC_img_2.png"
+            src="images/timeline/FC_img_2.png"
             alt="feature template"
             width={500}
             height={500}
@@ -827,7 +827,7 @@ export const TIMELINE_DATA = [
         <div className="timeline-image-grid">
           <img
             // src="https://assets.aceternity.com/pro/hero-sections.png"
-            src="/jordondev/public/images/timeline/FRP_img_1.png"
+            src="images/timeline/FRP_img_1.png"
             alt="hero template"
             width={500}
             height={500}
@@ -836,7 +836,7 @@ export const TIMELINE_DATA = [
           />
           <img
             // src="https://assets.aceternity.com/features-section.png"
-            src="/jordondev/public/images/timeline/FRP_img_2.png"
+            src="images/timeline/FRP_img_2.png"
             alt="feature template"
             width={500}
             height={500}
@@ -845,7 +845,7 @@ export const TIMELINE_DATA = [
           />
           <img
             // src="https://assets.aceternity.com/pro/bento-grids.png"
-            src="/jordondev/public/images/timeline/FRP_img_3.png"
+            src="images/timeline/FRP_img_3.png"
             alt="bento template"
             width={500}
             height={500}
@@ -875,7 +875,7 @@ export const TIMELINE_DATA = [
         </p>
         <div className="timeline-image-grid">
           <img
-            src="/jordondev/public/images/timeline/bmi.jpg"
+            src="images/timeline/bmi.jpg"
             alt="hero template"
             width={500}
             height={500}
