@@ -29,7 +29,6 @@
                 border-radius: 9999px;
                 top: -4vh;
                 background-color: #09090b;
-                // border: 1px solid rgba(255, 255, 255, 0.1);
 
                 .pin-title {
                     @include util.setFont(27px util.$TITLE-FONT, null, 400);
