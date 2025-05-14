@@ -11,8 +11,8 @@
         margin-top: 1rem;
         margin-left: 0.09375rem;
         perspective: 1000px;
+        transform: rotateX(0deg) translateZ(0deg);
         // transform: rotateX(70deg) translateZ(0deg);
-        transform: translateZ(0deg);
 
         .pin-card-inner {
             @include util.flex(flex-start, flex-start, null, null, null);
